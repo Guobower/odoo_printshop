@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="offset_printshop_form_view_parent">
+			<field name="name">offset.printshop.form.parent</field>
+			<field name="model">offset.printshop</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form class="o_sale_order">
+					<nav >
+						<div class="oe_button_box" >
+							<header>
+							<button name="compute_parent"   string="Calcult childs" type="object"  icon="gtk-go-forward" />
+								<field name="ok_prod"  string="Is the product confirmed for production" />
+								<button name="generate_product_ok"   string="Create product" type="object"  icon="gtk-go-forward" attrs="{'invisible': [('ok_prod','=',False)]}" states="{'done':[('state','=','done')]}"/>
+								<button name="generate_bom"   string="Create BOM" type="object"  icon="gtk-go-forward" attrs="{'invisible': [('ok_prod','=',False)]}"/>
+							</header>
+						</div>
+					</nav>
+					<sheet >
+						<div class="oe_button_box" name="compute_qte_1">
+							<button name="compute_qte_1" type="object"
+                                class="oe_stat_button" icon="fa-archive"></button>
+							<button name="generate_product_okr" type="object"
+                                class="oe_stat_button" icon="fa-pencil-square-o" string="Create product"></button>
+							<button name="generate_bom" type="object"
+                                class="oe_stat_button" icon="fa-pencil-square-o" string="Create Bom"></button>
+						</div>
+						<group>
+							<field name="type_offset" widget='radio' options="{'horizontal': true}" class=".easedemo" />"
+						</group>
+							<div class="panel panel-primary">
+								<group>
+									<group >
+										<field name="partner_id" options="{'limit': 10, 'create': false, 'create_edit': false}"/>
+										<field name="imprime" string="Product" />
+										<field name="name" string="N° Quote" />
+										<field name="date" string="Date" />
+										<field name="parent_id" />
+									</group>
+									<group>
+										<field name="desc_ventes" class="oe_read_only" />
+									</group>
+								</group>
+							</div>
+							<field name="profil_setting" widget='selection' colspan="4" />
+							<group>                            <field name="quantite" string="Qty for cpund product"/>
+
+           </group>
+							<field name="child_ids">
+								<tree>
+									<field name="name" />
+									<field name="type_offset" />
+									<field name="imprime"/>
+									<field name="largeur"/>
+									<field name="longueur"/>
+									<field name="quantite" />
+									<field name="prix_vente_total" />
+								</tree>
+							</field>
+							<notebook>
+								<page string="Les sous produits">
+									<field name="state"  widget="selection" />
+									<field name="subproduct_ids"  >
+										<tree editable="bottom">
+											<field name="product_id"/>
+											<field name="name"/>
+											<field name="product_qty"/>
+											<field name="unit_price" groups="base.group_sale_manager"/>
+											<field name="subtotal" groups="base.group_sale_manager"/>
+										</tree>
+									</field>
+								</page >
+							</notebook>
+						</sheet>
+					</form>
+				</field>
+			</record>
+			<record model="ir.ui.view" id="offset_printshop_tree_view_parent">
+				<field name="name">offset.printshop.tree.parent</field>
+				<field name="model">offset.printshop</field>
+				<field name="type">tree</field>
+				<field name="arch" type="xml">
+					<tree string="Offset" colors="grey:state in ('done');black:state in ('draft');red:user_id in ('user_id')" default_order="parent_is DESC">
+						<field name="name" />
+						<field name="parent_is" domain="((parent_is),in,True)"/>
+						<field name="partner_id"/>
+						<field name="user_id"/>
+						<field name="date"/>
+						<field name="state"/>
+					</tree>
+				</field>
+			</record>
+			<record model="ir.actions.act_window" id="action_offset_printshop_tree_view_parent">
+				<field name="name">Calcul Offset multiproduit</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="res_model">offset.printshop</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+			</record>
+			<record id="action_offset_printshop_form_view2_parent" model="ir.actions.act_window.view">
+				<field eval="2" name="sequence" />
+				<field name="view_mode">form</field>
+				<field name="view_id" ref="offset_printshop_form_view_parent" />
+				<field name="act_window_id" ref="action_offset_printshop_tree_view_parent" />
+			</record>
+			<record id="action_offset_printshop_tree_view2_parent" model="ir.actions.act_window.view">
+				<field eval="1" name="sequence" />
+				<field name="view_mode">tree</field>
+				<field name="view_id" ref="offset_printshop_tree_view_parent" />
+				<field name="act_window_id" ref="action_offset_printshop_tree_view_parent" />
+			</record>
+			<menuitem id="offset_printshop_menu_multi" parent="offset_applat_parent_menu" action="action_offset_printshop_tree_view_parent" name="Compound products"/>
+		</data>
+	</openerp>           

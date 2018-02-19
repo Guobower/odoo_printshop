@@ -1,0 +1,3025 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* offset_printshop 6
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-03 13:58+0000\n"
+"PO-Revision-Date: 2017-07-19 21:34+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.1\n"
+"Last-Translator: \n"
+"Language: fr\n"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_printshop_setting_tree_view model:ir.ui.menu,name:offset_printshop
+#: 6.printshop_setting_menu
+msgid " Admin setting "
+msgstr "Paramètres Administrateur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_contrecollage_id
+msgid " service Sheet lamination"
+msgstr "Service lamentation feuille"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.action_offredeprix_product_form_view
+msgid "(update)"
+msgstr "(mettre à jour)"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Consumed Products</strong>"
+msgstr "<strong>Produits consommés</strong>"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>DC:</strong><br/>"
+msgstr "<strong>DC:</strong> <br/>"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Destination Location</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Name</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>No. Of Cycles</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>No. Of Hours</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Nomenclature de base</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Partner Ref:</strong><br/>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Printing date:</strong><br/>"
+msgstr "<strong>Date d'impression:</strong> <br/>"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Product</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Products to Consume</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Produit:</strong><br/>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Quantity:</strong><br/>"
+msgstr "<strong>Quantité:</strong> <br/>"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>Quantité</strong>"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>SO Number:</strong><br/>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Scheduled Date:</strong><br/>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Sequence</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Source Location</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>Work Orders</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>WorkCenter</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>produit</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "<strong>quantite</strong>"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_accessoirs_id
+msgid "Accessory"
+msgstr "Accessoires"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_offset_printshop_machine_ids
+msgid "Add machines to calculate printing"
+msgstr "Ajouter des machines pour calculer l’impression"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.printshop2_setting_form_view
+msgid "Admin setting Printshop sheet"
+msgstr " réglage admin Printshop Sheet"
+
+#. module: offset_printshop 6
+#: selection:offredeprix.product,etat_devis:0
+msgid "Annuler"
+msgstr "Annuler"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_printshop_product_template_view
+msgid "Artciles Printshop"
+msgstr "Articles PrintShop"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_parent_is
+msgid "Article compose"
+msgstr "Article composé"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop
+#: 6.menu_printshop_product_template_view
+msgid "Articles"
+msgstr "Articles"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Assemblage"
+msgstr "Assemblage"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop 6.attribute_line_action
+#: model:ir.ui.menu,name:offset_printshop 6.menu_attribute_line_action
+msgid "Attributes lines"
+msgstr "Attribues des lignes "
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_bom_id
+msgid "BOM"
+msgstr ""
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,type_offset:0
+msgid "Bag"
+msgstr "Sac"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_ass_sac
+msgid "Bag assembly"
+msgstr "Assemblage Sac"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_hauteur
+msgid "Bag height"
+msgstr "Hauteur sac"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "Baguette"
+msgstr "Baguette"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_printshop2_machine_prix_calage
+#: 6.field_printshop2_machine_prix_insolation
+#: 6.field_printshop2_machine_prix_tirage
+#: 6.field_printshop2_support_line_list_price
+#: 6.field_printshop2_supportpell_line_list_price
+msgid ""
+"Base price to compute the customer price. Sometimes called the catalog price."
+msgstr ""
+"Prix de base pour calculer le prix client. Parfois appelé prix catalogue."
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_soufflet
+msgid "Bellows bag"
+msgstr "Assemblage Sac"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "Bill Of Material"
+msgstr "Nomenclature"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Nomenclature"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_fond_perdu_inter
+msgid "Bled inside sheet"
+msgstr "Fond perdu intérieur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_setting_bleed
+msgid "Bleed"
+msgstr "Fond Perdu"
+
+#. module: offset_printshop 6
+#: code:addons/offset_printshop 6/models/mrp.py:104
+#, python-format
+msgid "BoM \"%s\" contains a BoM line with a product recursion: \"%s\"."
+msgstr ""
+
+#. module: offset_printshop 6
+#: code:addons/offset_printshop 6/models/mrp.py:131
+#, python-format
+msgid ""
+"BoM \"%s\" contains a phantom BoM line but the product \"%s\" does not have "
+"any BoM defined."
+msgstr ""
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,type_offset:0
+msgid "Book & Booket"
+msgstr "Brochures"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,type_offset:0
+msgid "Box"
+msgstr "Boite"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_profondeur_boite
+msgid "Box depth"
+msgstr "Profondeur Boite"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_hauteur_boite
+msgid "Box height"
+msgstr "Hauteur boite"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,etat_prod:0
+msgid "CTP"
+msgstr "CTP"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.Grand_Format_menu
+msgid "Calcul Grand Format"
+msgstr "Calcul Grand Format"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_offset_printshop_tree_view_parent
+msgid "Calcul Offset multiproduit"
+msgstr "Calcul Offset multiproduit"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Calculate Quote"
+msgstr "Calculer la quotation"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_offset_printshop_tree_view
+msgid "Calculation price sheet printing"
+msgstr "Calculer prix Impression feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_bom_calculer 6.field_mrp_bom_line_calculer
+msgid "Calculer cout"
+msgstr "calculer couts"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_ids 6.field_offset_printshop_priceline_ids
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Calculs"
+msgstr "Calculs"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.offset_printshop_form_view_parent
+msgid "Calcult childs"
+msgstr "calculer les sous produits"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_prix_qte
+msgid "Calculte price"
+msgstr "Calculer prix"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "Can be Sold"
+msgstr "Peut être vendu"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,type_offset:0
+msgid "Card & flyer"
+msgstr "carte et Flyer"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_emballage_carton_id
+msgid "Cardboard packaging"
+msgstr "Carrton"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_support_line_id_contrecollage
+msgid "Cardbord variants"
+msgstr "variants de carton"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_support_id_contrecollage
+msgid "Cardoborad Sheet lamination "
+msgstr "Lamination sur carton"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_marque_support
+msgid "Categorie paper"
+msgstr "categorie papier"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_marque model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_offset_printshop_parent_is
+msgid "Check if the item is composed of several items"
+msgstr "Activer si le produit est compose de d'autre produits"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_product_template_support_offset_is
+msgid ""
+"Check this box if the product is a support for the sheet printing used in "
+"the calculation of the price."
+msgstr "Activer si le produit est un support d'impression en feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_product_template_calculate_price
+msgid "Check this box if the product is included in the price calculation."
+msgstr "Activer si le produit est calculer sur la nomenclature"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_offset_printshop_support_fournis
+#: 6.field_offset_printshop_support_inter
+msgid "Check whether the print media is supplied by the client"
+msgstr "Activer si le client fourni son propre support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_child_ids
+msgid "Chils product"
+msgstr "Sous produits"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_partner_id 6.field_offredeprix_product_partner_id
+msgid "Client"
+msgstr "Client"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_printshop_supportpell_tree_view
+#: model:ir.ui.menu,name:offset_printshop 6.printshop_supportpells_menu
+#: model:ir.ui.view,arch_db:offset_printshop 6.printshop2_supportpell_form_view
+msgid "Coating Media"
+msgstr "Support de pelliculage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_couleur
+msgid "Color"
+msgstr "Couleur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_coul_verso_inter
+msgid "Color Back interior"
+msgstr "Couleur verso interieur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_coul_recto_inter
+msgid "Color Front interior"
+msgstr "Couleur recto interieur"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.action_offredeprix_product_form_view
+msgid "Components"
+msgstr "composants"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.offset_printshop_menu_multi
+#: selection:offset.printshop,type_offset:0
+msgid "Compound products"
+msgstr "Produits composé"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.grand_format_conf_menu
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_constante
+msgid "Constant product"
+msgstr "Produit constant en production"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "Consumable"
+msgstr "Consommable"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "Consumable products"
+msgstr "Article consommable"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_cout 6.field_printshop_machine_prix_m2
+msgid "Cost"
+msgstr "cout"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_stock_production_lot_cost_price_unit
+msgid "Cost Price Unit"
+msgstr "Cout unitaire"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_stock_production_lot_cost_price_unit
+msgid "Cost of one UoM of the product of this lot in the company's currency."
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_prix_interne
+msgid "Cost of production"
+msgstr "Cout de production"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_printshop_machine_prix_m2
+msgid ""
+"Cost of the product template used for standard stock valuation in accounting "
+"and used as a base price on purchase orders. Expressed in the default unit "
+"of measure of the product."
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.mrp_production_add_costs_form_view
+msgid "Cout du produit"
+msgstr "Cout du produit"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Couverture"
+msgstr "Couverture"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+#: 6.offset_printshop_form_view_parent
+msgid "Create BOM"
+msgstr "Créer Nomenclature"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+#: 6.offset_printshop_form_view_parent
+msgid "Create Bom"
+msgstr "Créer Nomenclature"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+#: 6.offset_printshop_form_view_parent
+msgid "Create product"
+msgstr "Creer Produit"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_create_uid
+#: 6.field_offredeprix_product_create_uid
+#: 6.field_offredeprix_product_line_create_uid
+#: 6.field_offset_printshop_create_uid 6.field_offset_printshop_line_create_uid
+#: 6.field_offset_printshop_priceline_create_uid
+#: 6.field_offset_printshop_subproduct_create_uid
+#: 6.field_printshop2_machine_create_uid 6.field_printshop2_quantite_create_uid
+#: 6.field_printshop2_remise_create_uid 6.field_printshop2_setting_create_uid
+#: 6.field_printshop2_stype_create_uid 6.field_printshop2_support_create_uid
+#: 6.field_printshop2_support_line_create_uid
+#: 6.field_printshop2_supportpell_create_uid
+#: 6.field_printshop2_supportpell_line_create_uid
+#: 6.field_printshop2_type_support_create_uid
+#: 6.field_printshop_pricelist_create_uid
+msgid "Created by"
+msgstr "Créer par"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_create_date
+#: 6.field_offredeprix_product_create_date
+#: 6.field_offredeprix_product_line_create_date
+#: 6.field_offset_printshop_create_date
+#: 6.field_offset_printshop_line_create_date
+#: 6.field_offset_printshop_priceline_create_date
+#: 6.field_offset_printshop_subproduct_create_date
+#: 6.field_printshop2_machine_create_date
+#: 6.field_printshop2_quantite_create_date
+#: 6.field_printshop2_remise_create_date 6.field_printshop2_setting_create_date
+#: 6.field_printshop2_stype_create_date 6.field_printshop2_support_create_date
+#: 6.field_printshop2_support_line_create_date
+#: 6.field_printshop2_supportpell_create_date
+#: 6.field_printshop2_supportpell_line_create_date
+#: 6.field_printshop2_type_support_create_date
+#: 6.field_printshop_pricelist_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_user_id
+msgid "Createur"
+msgstr "Createur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_decoupe_id
+msgid "Cutting"
+msgstr "Decoupe"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_date 6.field_offset_printshop_date
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+#: 6.offset_printshop_form_view_parent
+msgid "Date"
+msgstr "Date"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "Default Unit of Measure"
+msgstr "Unité de mesure par défaut"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_name 6.field_offset_printshop_description
+#: 6.field_printshop2_type_support_description
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Description"
+msgstr "Description"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Description for Quotations"
+msgstr "Description de vente"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_line_desc 6.field_offset_printshop_name
+#: 6.field_offset_printshop_subproduct_name 6.field_printshop_machine_name
+#: 6.field_printshop_rigide_name 6.field_printshop_support_name
+msgid "Designation"
+msgstr "Designation"
+
+#. module: offset_printshop 6
+#: selection:printshop2.machine,typeprinter:0
+msgid "Digital"
+msgstr "Digital"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Digital Print"
+msgstr "Impression numerique"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Digital cutting"
+msgstr "decoupe numerique"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_remise_id 6.field_printshop2_remise_valeur
+#: 6.field_printshop2_setting_remise_id
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Discount"
+msgstr "Remise"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_display_name
+#: 6.field_offredeprix_product_display_name
+#: 6.field_offredeprix_product_line_display_name
+#: 6.field_offset_printshop_display_name
+#: 6.field_offset_printshop_line_display_name
+#: 6.field_offset_printshop_priceline_display_name
+#: 6.field_offset_printshop_subproduct_display_name
+#: 6.field_other_product_line_display_name
+#: 6.field_printshop2_machine_display_name
+#: 6.field_printshop2_quantite_display_name
+#: 6.field_printshop2_remise_display_name
+#: 6.field_printshop2_setting_display_name
+#: 6.field_printshop2_stype_display_name
+#: 6.field_printshop2_support_display_name
+#: 6.field_printshop2_support_line_display_name
+#: 6.field_printshop2_supportpell_display_name
+#: 6.field_printshop2_supportpell_line_display_name
+#: 6.field_printshop2_type_support_display_name
+#: 6.field_printshop_machine_display_name
+#: 6.field_printshop_pricelist_display_name
+#: 6.field_printshop_rigide_display_name
+#: 6.field_printshop_rigide_line_display_name
+#: 6.field_printshop_support_display_name
+#: 6.field_printshop_support_line_display_name
+#: 6.field_xl_printshop_display_name 6.field_xl_printshop_line_display_name
+#: 6.field_xl_printshop_rigide_line_display_name
+#: 6.field_xl_printshop_subproduct_display_name
+msgid "Display Name"
+msgstr "Nom"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "Divers"
+msgstr "Divers"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,state:0
+msgid "Done"
+msgstr "Annuler"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,qte_contrecollage:0
+msgid "Double side"
+msgstr "Recto verso"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,state:0
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_clichet_gauffarge
+msgid "Embossed pictures"
+msgstr "Gauffrage"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid ""
+"Enable this field if your articles and a constant load in the nomenclature"
+msgstr "Activer si l’artcile est constant en production"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_calculate_price
+msgid "Enable to Calculate Internal Price"
+msgstr "calculer prix en fonction nomenclature"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_pelliculage
+msgid "Face coating"
+msgstr "Face pelliculage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_invoice_id
+msgid "Facture"
+msgstr "Facture"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_name 6.field_printshop2_supportpell_name
+msgid "Familly"
+msgstr "Famille"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Field of products calculated in the configurator print shop"
+msgstr "Produit calculer dans le calculateur printShop"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Finition"
+msgstr "Finition"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_pliage_id
+#: selection:product.template,type_production:0
+msgid "Folding"
+msgstr "Pliage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_compute
+msgid "Force"
+msgstr "Forcer"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,nbr_pages:0
+#: selection:offset.printshop,nbr_pages_inter:0
+#: selection:offset.printshop,nbr_pelliculage:0
+#: selection:offset.printshop,nbr_pelliculage_inter:0
+#: selection:offset.printshop,nbr_serigraphie:0
+#: selection:offset.printshop,nbr_serigraphie_int:0
+#: selection:offset.printshop,qte_contrecollage:0
+msgid "Front"
+msgstr "Recto"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,nbr_pages:0
+#: selection:offset.printshop,nbr_pages_inter:0
+#: selection:offset.printshop,nbr_pelliculage:0
+#: selection:offset.printshop,nbr_pelliculage_inter:0
+#: selection:offset.printshop,nbr_serigraphie:0
+#: selection:offset.printshop,nbr_serigraphie_int:0
+msgid "Front/Back"
+msgstr "Recto/verso"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "General Information"
+msgstr "Information générale"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_grammage 6.field_product_template_grammage
+msgid "Grammage"
+msgstr "Grammage"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,type_prod:0
+msgid "Grand Format"
+msgstr "Grand Format"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "Group by..."
+msgstr "Regrouper par..."
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_id 6.field_offredeprix_product_id
+#: 6.field_offredeprix_product_line_id 6.field_offset_printshop_id
+#: 6.field_offset_printshop_line_id 6.field_offset_printshop_priceline_id
+#: 6.field_offset_printshop_subproduct_id 6.field_printshop2_machine_id
+#: 6.field_printshop2_quantite_id 6.field_printshop2_remise_id
+#: 6.field_printshop2_setting_id 6.field_printshop2_stype_id
+#: 6.field_printshop2_support_id 6.field_printshop2_support_line_id
+#: 6.field_printshop2_supportpell_id 6.field_printshop2_supportpell_line_id
+#: 6.field_printshop2_type_support_id 6.field_printshop_pricelist_id
+msgid "ID"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Informations Générales"
+msgstr "Informations Générales"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_pelliculage_id_inter
+msgid "Inner lamination type"
+msgstr "pelliculage interieur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_longueur_inter
+msgid "Inside length"
+msgstr "Longueur intérieure"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Interieur"
+msgstr "interieur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_largeur_inter
+msgid "Interior open width"
+msgstr "Format ouvert"
+
+#. module: offset_printshop 6
+#: code:addons/offset_printshop 6/models/mrp.py:104 6/models/mrp.py:131
+#, python-format
+msgid "Invalid Action!"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_subproduct_matieres
+msgid "Is a raw material"
+msgstr "Est une matiere premiere"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Is the product a paper holder?"
+msgstr "Le produit est un support de papier?"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+#: 6.offset_printshop_form_view_parent
+msgid "Is the product confirmed for production"
+msgstr "Est ce que vous confirmer la production"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Laminage"
+msgstr "Laminage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe___last_update
+#: 6.field_offredeprix_product___last_update
+#: 6.field_offredeprix_product_line___last_update
+#: 6.field_offset_printshop___last_update
+#: 6.field_offset_printshop_line___last_update
+#: 6.field_offset_printshop_priceline___last_update
+#: 6.field_offset_printshop_subproduct___last_update
+#: 6.field_other_product_line___last_update
+#: 6.field_printshop2_machine___last_update
+#: 6.field_printshop2_quantite___last_update
+#: 6.field_printshop2_remise___last_update
+#: 6.field_printshop2_setting___last_update
+#: 6.field_printshop2_stype___last_update
+#: 6.field_printshop2_support___last_update
+#: 6.field_printshop2_support_line___last_update
+#: 6.field_printshop2_supportpell___last_update
+#: 6.field_printshop2_supportpell_line___last_update
+#: 6.field_printshop2_type_support___last_update
+#: 6.field_printshop_machine___last_update
+#: 6.field_printshop_pricelist___last_update
+#: 6.field_printshop_rigide___last_update
+#: 6.field_printshop_rigide_line___last_update
+#: 6.field_printshop_support___last_update
+#: 6.field_printshop_support_line___last_update
+#: 6.field_xl_printshop___last_update 6.field_xl_printshop_line___last_update
+#: 6.field_xl_printshop_rigide_line___last_update
+#: 6.field_xl_printshop_subproduct___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_write_uid
+#: 6.field_offredeprix_product_line_write_uid
+#: 6.field_offredeprix_product_write_uid
+#: 6.field_offset_printshop_line_write_uid
+#: 6.field_offset_printshop_priceline_write_uid
+#: 6.field_offset_printshop_subproduct_write_uid
+#: 6.field_offset_printshop_write_uid 6.field_printshop2_machine_write_uid
+#: 6.field_printshop2_quantite_write_uid 6.field_printshop2_remise_write_uid
+#: 6.field_printshop2_setting_write_uid 6.field_printshop2_stype_write_uid
+#: 6.field_printshop2_support_line_write_uid
+#: 6.field_printshop2_support_write_uid
+#: 6.field_printshop2_supportpell_line_write_uid
+#: 6.field_printshop2_supportpell_write_uid
+#: 6.field_printshop2_type_support_write_uid
+#: 6.field_printshop_pricelist_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_write_date
+#: 6.field_offredeprix_product_line_write_date
+#: 6.field_offredeprix_product_write_date
+#: 6.field_offset_printshop_line_write_date
+#: 6.field_offset_printshop_priceline_write_date
+#: 6.field_offset_printshop_subproduct_write_date
+#: 6.field_offset_printshop_write_date 6.field_printshop2_machine_write_date
+#: 6.field_printshop2_quantite_write_date 6.field_printshop2_remise_write_date
+#: 6.field_printshop2_setting_write_date 6.field_printshop2_stype_write_date
+#: 6.field_printshop2_support_line_write_date
+#: 6.field_printshop2_support_write_date
+#: 6.field_printshop2_supportpell_line_write_date
+#: 6.field_printshop2_supportpell_write_date
+#: 6.field_printshop2_type_support_write_date
+#: 6.field_printshop_pricelist_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: offset_printshop 6
+#: code:addons/offset_printshop 6/models/offset_printshop.py:1013
+#: 6/models/xl_printshop.py:478
+#, python-format
+msgid "Le nombre de page doit etre multiple de 4"
+msgstr "Le nombre de page doit etre multiple de 4"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_support_offset_is
+msgid "Leaf Print Support"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Leaf price estimate"
+msgstr ""
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,type_offset:0
+msgid "Leaflet folder"
+msgstr "Depliant"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_longueur_support
+msgid "Lenght print media"
+msgstr "Longueur support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_longueur 6.field_product_template_longueur_calcul
+msgid "Length"
+msgstr "Longueur "
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.offset_printshop_form_view_parent
+msgid "Les sous produits"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_prise_pince
+msgid "Machine gripper clamp"
+msgstr "Prise de pince machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_long_mach
+msgid "Machine length"
+msgstr "Longueur Machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_name
+msgid "Machine name"
+msgstr "Nom de machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_larg_mach
+msgid "Machine width"
+msgstr "Largeur Machine"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Machines"
+msgstr "Machines"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Ordre de fabrication"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_prix_total
+msgid "Montant Total HT"
+msgstr "Montant Total HT"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_Multiqty
+msgid "Multiquantity"
+msgstr "Multi quantite"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_name 6.field_offset_printshop_priceline_name
+#: 6.field_printshop2_quantite_name 6.field_printshop2_remise_name
+#: 6.field_printshop2_stype_name 6.field_printshop_pricelist_name
+msgid "Name"
+msgstr "Nom"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_calage
+msgid "Nbr Machine setting"
+msgstr "Prix preparation machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_souches
+msgid "Nbr Strains"
+msgstr "Nombre de spirale"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_souches_carnet
+msgid "Nbr Strains per book"
+msgstr "Nbr de pages"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_nbr_coul_mach
+msgid "Nbr color of the machine"
+msgstr "Nbr groupe de machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_pages_inter
+msgid "Nbr face printing"
+msgstr "nbr face d'impression"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_contrecollage
+msgid "Nbr faces Sheet lamination cardbord "
+msgstr "NBr de face contre collage carton"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_coul_r_v
+msgid "Nbr of color"
+msgstr "nbr de couleurs"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_composants
+msgid "Nbr of component not covered"
+msgstr "Nbr de pages hors couverture"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_feuille_bloc
+msgid "Nbr of sheet"
+msgstr "Nbr de feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_nbr_passe
+msgid "Nbr of sup. Quantity for production"
+msgstr "Quantite supplementaire de production"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_insolation
+msgid "Nbr plate insolation"
+msgstr "Nbr de plaque"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_pages
+msgid "Nbr printing face"
+msgstr "Nbr face d'impression"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_nbr_feuille
+msgid "Nbr sheet"
+msgstr "Nbr de feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_pricelist_bom_id
+msgid "Nomenclature"
+msgstr "Nomenclature"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,type_offset:0
+msgid "Notebook"
+msgstr "Blocnote"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Notes"
+msgstr "Notes"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_poses_forme
+msgid "Number of Poses per Cutting Form"
+msgstr "Nbr de poses par forme"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_clichet
+msgid "Number of Slices"
+msgstr "NBr de boucles"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_clichet_gauffrage
+msgid "Number of embossed pictures"
+msgstr "Nbr de pages à Gauffrer"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_pelliculage_inter
+msgid "Number of face"
+msgstr "Nbr de face"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_spirale
+msgid "Number of loops per print"
+msgstr "NBr de boucles"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_pages_brochure
+msgid "Number of pages"
+msgstr "Nbr de pages"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+#: 6.offset_printshop_form_view_parent
+msgid "N° Quote"
+msgstr "N° Quote"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.offredeprix_menu
+msgid "OFFRE de Prix"
+msgstr "OFFRE de Prix"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_offset_printshop_subproduct
+msgid "OFFSET PRINTSHOP SUBPRODUCT"
+msgstr "OFFSET PRINTSHOP SUBPRODUCT"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "Oeillet"
+msgstr "Oeillet"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.action_offredeprix_product_form_view
+msgid "Offre de Prix"
+msgstr "Offre de Prix"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_tree_view
+#: 6.offset_printshop_tree_view_parent
+#: selection:printshop2.machine,typeprinter:0
+msgid "Offset"
+msgstr "Offset"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_offset_printshop
+msgid "Offset PRINTSHOP"
+msgstr "Offset PRINTSHOP"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_offset_printshop_line
+msgid "Offset PRINTSHOP Line"
+msgstr "Offset PRINTSHOP Line"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_offset_printshop_priceline
+msgid "Offset PRINTSHOP priceLine"
+msgstr "Offset PRINTSHOP priceLine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_printshop_id
+#: 6.field_offset_printshop_priceline_printshop_id
+#: 6.field_offset_printshop_subproduct_printshop_id
+#: 6.field_printshop2_quantite_printshop_id
+#: 6.field_printshop_pricelist_printshop_id
+msgid "Offset Printshop"
+msgstr "Offset Printshop"
+
+#. module: offset_printshop 6
+#: model:res.groups,name:offset_printshop 6.group_offset_printshop_manager
+msgid "Offset Printshop Manager"
+msgstr "Offset Printshop Manager"
+
+#. module: offset_printshop 6
+#: model:res.groups,name:offset_printshop 6.group_offset_printshop_user
+msgid "Offset Printshop user"
+msgstr "Offset Printshop user"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Offset cutting"
+msgstr "Decoupe offset"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Offset print"
+msgstr "Impression "
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.report_mrp_ordreFabrication
+msgid "Ordre de Fabriccation  N° :"
+msgstr "Ordre de Fabriccation  N° :"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.printshop_menu
+#: selection:mrp.production,type_prod:0
+msgid "PLV"
+msgstr "PLV"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.menu_printshop
+msgid "PRINT SHOP"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_support_line
+msgid "PRINTSHOP Support line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_supportpell_line
+msgid "PRINTSHOP Support pelliculage line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop_pricelist
+msgid "PRINTSHOP priceList"
+msgstr "PRINTSHOP liste des prix"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_stype
+msgid "PRINTSHOP2 support type"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_emballage
+msgid "Packet quantity"
+msgstr "Quantité de paquet"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_parent_id 6.field_offset_printshop_parent
+#: 6.field_offset_printshop_parent_id
+msgid "Parent"
+msgstr "Parent de produit composé"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_partner_id
+msgid "Partner"
+msgstr "Partenaire "
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Pelliculage"
+msgstr "Pelliculage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_insolation_id
+#: selection:product.template,type_production:0
+msgid "Plate Insolation"
+msgstr "Insolation de plaque"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_poses_machine
+msgid "Poses machine"
+msgstr "Nbr pose machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_poses_support
+msgid "Poses support"
+msgstr "Nbr poses Support"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Price"
+msgstr "Prix"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_prix_insolation
+msgid "Price Plate Insolation"
+msgstr "Prix insolation plaque"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_prix_kg
+msgid "Price kg"
+msgstr "prix kg"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_prix_tirage
+msgid "Price of the print run"
+msgstr "Prix Tirage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_line_list_price
+msgid "Price sale of the sheet"
+msgstr "Prix de vente de la feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_supportpell_line_list_price
+msgid "Price sale of the sqm"
+msgstr "Prix au m2"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_prix_calage
+msgid "Price setting machine"
+msgstr "Prix preparation machine"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Pricelist"
+msgstr "Liste de prix"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Pricelist Items"
+msgstr "Composants liste de prix"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_price_list_item
+msgid "Prices bases"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Prices table"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Prices tables"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Pricing"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_print_id
+msgid "Print"
+msgstr "Impression"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_printshop_support_tree_view
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_support_id
+#: 6.field_offset_printshop_support_line_id_inter
+#: model:ir.ui.menu,name:offset_printshop 6.printshop_supports_menu
+#: model:ir.ui.view,arch_db:offset_printshop 6.printshop2_support_form_view
+msgid "Print Media"
+msgstr "Type de support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_imprime
+msgid "Print Product"
+msgstr "Imprimé"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_longueur_imp
+msgid "Print length"
+msgstr "largeur impression"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_support_id
+#: 6.field_printshop2_support_line_support_id
+#: 6.field_printshop2_supportpell_line_supportpell_id
+#: model:ir.ui.view,arch_db:offset_printshop 6.printshop_setting_tree_view
+#: 6.printshop_support_tree_view 6.printshop_supportpell_tree_view
+msgid "Print media"
+msgstr "Type de support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_support_fournis
+#: 6.field_offset_printshop_support_inter
+msgid "Print media Supplied"
+msgstr "Support fournis"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_line_marque_support
+msgid "Print media brand"
+msgstr "Marque de support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_line_gr_support
+msgid "Print media grammage"
+msgstr "Grammage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_line_kg_support
+msgid "Print media kg's price"
+msgstr "Prix du Kg support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_line_longueur_support
+#: 6.field_printshop2_supportpell_line_laize_supportpell
+msgid "Print media length"
+msgstr "Longueur support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_type 6.field_printshop2_support_type_id
+msgid "Print media type"
+msgstr "Type de support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_line_largeur_support
+msgid "Print media width"
+msgstr "largeur support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_sous_traitance
+msgid "Print subcontracting"
+msgstr "Sous traitance impression"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_largeur_imp
+msgid "Print width"
+msgstr "largeur impression"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.Sheet_printshop_menu
+msgid "Printing Sheet"
+msgstr "Impression feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_support_line_id
+msgid "Prints Media variants"
+msgstr "Variantes du support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_bom_line_prix_interne 6.field_mrp_bom_prix_interne
+msgid "Prix de revient"
+msgstr "Prix de revient"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_line_prix
+msgid "Prix unitaire"
+msgstr "Prix unitaire"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_ok_prod
+msgid "Produced for production"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_product_id
+#: 6.field_offset_printshop_subproduct_product_id
+#: 6.field_printshop2_support_line_product_id
+#: 6.field_printshop2_supportpell_line_product_id
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+#: 6.offset_printshop_form_view_parent 6.product_template_search_view_offset
+msgid "Product"
+msgstr "Article"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Product Name"
+msgstr "Nom du produit"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Product Printshop"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_subproduct_product_uom
+msgid "Product UOM"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "Product Variant"
+msgstr "Variante d'article"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_product_categorie
+msgid "Product category"
+msgstr "Catégorie d'article"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_product_tmpl_id
+msgid "Product created"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_subproduct_product_qty
+msgid "Product qty"
+msgstr "Quantité de produit"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Product sale category"
+msgstr "Catégorie"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_production_id
+#: model:ir.ui.view,arch_db:offset_printshop 6.view_mrp_production_filter_ext
+msgid "Production"
+msgstr "Production"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.mrp_production_add_costs_form_view
+msgid "Production Costs"
+msgstr "Production Costs"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_quantite_prod
+msgid "Production Quantity"
+msgstr "Quantité de production"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_tolerance
+msgid "Production Tolerance"
+msgstr "Tolerance de production"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe
+msgid "Production charge fixe"
+msgstr "Production charge fixe"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_line_product_id
+#: 6.field_printshop_machine_product_id
+#: 6.field_printshop_rigide_line_product_id
+#: 6.field_printshop_support_line_product_id
+msgid "Produit"
+msgstr "Produit"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_pliage
+msgid "Qte Folding"
+msgstr "qte Pliage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_pricelist_qte_bom
+msgid "Qte nomenclature"
+msgstr "qte Nomenclature"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_spirale
+msgid "Qte spirale"
+msgstr "Qte spirale"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_accessoirs
+msgid "Qty Accessory"
+msgstr "qte Accessoires"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_piquage
+msgid "Qty Stitchinge"
+msgstr "Qte piquage"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Qty bom"
+msgstr "Qte nomenclature"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_pelliculage_inter
+msgid "Qty laminate"
+msgstr "Qte laminage"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Qty of subproducts view"
+msgstr "Quantité des sous-prouits"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_quantites
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_pelliculage
+msgid "Quantity of film coatings"
+msgstr "Qte film pelliculage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_serigraphie_int
+msgid "Quantity of interior varnish"
+msgstr "Qte vernis interieur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_qte_emballage_carton
+msgid "Quantity of packages per carton"
+msgstr "Qte de paquets par carton"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_quantite
+msgid "Quantity ordered"
+msgstr "Quantite commandée"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Rigid support"
+msgstr "Support rigide"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "Rigide"
+msgstr "Rigide"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Roll length"
+msgstr "Longueur rouleau"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Roll support"
+msgstr "Support en rouleau"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Roll width"
+msgstr "laize rouleau"
+
+#. module: offset_printshop 6
+#: code:addons/offset_printshop 6/models/offset_printshop.py:1015
+#, python-format
+msgid "Saisir au moins une machine"
+msgstr "Choisir une machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_prix_qte_sale
+msgid "Sale Price"
+msgstr "Prix de vente"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_desc_ventes
+msgid "Sale description"
+msgstr "Description de vente"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_order_id
+msgid "Sales Order"
+msgstr "Commande commercial"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Sales Prices"
+msgstr "Prix de ventes"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Scraping"
+msgstr "Grattage"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.view_printshop_support_line_filter
+msgid "Search marque"
+msgstr "recherche marque support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_offset_printshop_product_categorie
+msgid "Select category for the current product"
+msgstr "Catégorie du produit selectioné"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_setting_name
+msgid "Setting Profil"
+msgstr "Profil de calcul"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_printshop2_machine_tree_view model:ir.ui.menu,name:offset_printshop
+#: 6.printshop2_machines_menu
+msgid "Setting Sheet printing Machine"
+msgstr "Parametres print feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_calage_id
+msgid "Setting machine to run"
+msgstr "Parametres démarage machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_form_decoupe_id
+msgid "Shape"
+msgstr "Forme"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.offset_applat_parent_menu
+msgid "Sheet Printshop"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_line_prix_support
+#: 6.field_product_template_prix_feuille
+msgid "Sheet price"
+msgstr "Prix feuille"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Sheet support"
+msgstr "Support en feuille"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.offset_printshop_menu
+msgid "Simple Product"
+msgstr "Produit simple"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Size"
+msgstr "Format"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_clichet_vernis
+msgid "Slices"
+msgstr "boucles"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.view_mrp_production_filter_ext
+msgid "Source MO"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.view_mrp_production_filter_ext
+msgid "Source SO"
+msgstr ""
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "Spirale"
+msgstr "Spirale"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Spirale punching"
+msgstr "Perforation spirale"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_state
+msgid "State"
+msgstr "Etat"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_piquage_id
+#: selection:product.template,type_production:0
+msgid "Stitching"
+msgstr "Assembalge"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "Sub products"
+msgstr "Sous produits"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_subproduct_subtotal
+msgid "Sub total"
+msgstr "Sous Total "
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_subproduct_ids
+msgid "Sub-products"
+msgstr "Sous produits"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_support_line_support_id
+msgid "Support"
+msgstr ""
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "Support GF"
+msgstr "Support impression grand format"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "Support offset"
+msgstr "Support offset"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Support papier en feuille"
+msgstr "Support papier en feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_rigide_line_ids
+msgid "Supprts rigide"
+msgstr "Support rigide"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Surface treatment"
+msgstr "Traitement de surface"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.offset_conf_menu
+msgid "Technical Configuration"
+msgstr "Configuration techniques"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_epaisseur_calcul
+msgid "Thickness grammage"
+msgstr "epaisseur/grammage"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "This note will be displayed on the quotations."
+msgstr "Description de vente"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_supportpell_epaisseur
+msgid "Tichkness"
+msgstr "Epaisseur"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Timing"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_setting_tolerance
+msgid "Tolerance of production"
+msgstr "Tolerance production"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_line_prix_total
+msgid "Totah HT"
+msgstr "Total HT"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.mrp_production_add_costs_form_view
+msgid "Total Costs"
+msgstr "Total Couts"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_cout_total
+msgid "Total cost"
+msgstr "Cout Total"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_cout_total_mat
+msgid "Total cost of materials"
+msgstr "Totat cout services"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_prix_vente_total
+msgid "Total selling price"
+msgstr "Prix de vente"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_type_offset
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "Type"
+msgstr "Type"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_pelliculage_id
+msgid "Type Coating"
+msgstr "Type de pelliculage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_type_support_name
+msgid "Type media"
+msgstr "Type de support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_typeprinter
+msgid "Type of Machine"
+msgstr "Type de machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_type_s
+msgid "Type of Support"
+msgstr "type de support"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Type of production equipment"
+msgstr "Type d'equipement"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_type_matieres
+msgid "Type of raw material"
+msgstr "Type de matieres premieres"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "Type of raw materials"
+msgstr "Type de matieres premieres"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_type_production
+msgid "Type production"
+msgstr "Type de production"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_subproduct_unit_price
+msgid "Unit Price"
+msgstr "Prix unitaire"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_stock_production_lot_uom_id
+msgid "Unit of measure used to calculate the cost price of this lot."
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_prix_vente_unitaire
+msgid "Unit selling price"
+msgstr "Unité de vente de produit"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_stock_production_lot_uom_id
+msgid "UoM"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.printshop2_support_form_view
+msgid "Update paper name"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_user_id
+msgid "User"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.attribute_line_tree_view
+msgid "Variant Values"
+msgstr "Valeur de variantes"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_line_ids 6.field_printshop2_supportpell_line_ids
+#: 6.field_printshop_support_line_ids
+msgid "Variants Print media"
+msgstr "Variantes de support d'impression"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "Various"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_serigraphie
+#: 6.field_offset_printshop_nbr_serigraphie_int
+msgid "Varnish faces"
+msgstr "Face de vernis"
+
+#. module: offset_printshop 6
+#: code:addons/offset_printshop 6/models/offset_printshop.py:1802
+#, python-format
+msgid "Veuillez attacher un produit"
+msgstr "Veuillez attacher un produit"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_machine_laize_mach
+#: 6.field_printshop_rigide_line_largeur_rigide
+#: 6.field_product_template_largeur_calcul
+msgid "Width / Width roll"
+msgstr "laize rouleau"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_largeur_sac
+msgid "Width Bag"
+msgstr "largeur sac"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_largeur_ferme
+msgid "Width Closed"
+msgstr "Largeur fermé"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_largeur_ferme_inter
+msgid "Width Closed interior"
+msgstr "largeur fermé interieur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_largeur_boite
+msgid "Width box"
+msgstr "largeur boite"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_contrecollage
+msgid "With lamination cardbord"
+msgstr "Avec lamination sur carton"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,nbr_pelliculage_inter:0
+msgid "Without"
+msgstr "Sans"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_xl_printshop
+msgid "XL printshop"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_xl_printshop_line
+msgid "XL printshop Line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_xl_printshop_rigide_line
+msgid "XL printshop Rigide Line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_xl_printshop_subproduct
+msgid "XL printshop SUBPRODUCT"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_ass_sac_id
+msgid "assemblage sac"
+msgstr "Assemblage sac"
+
+#. module: offset_printshop 6
+#: selection:offredeprix.product,etat_devis:0
+msgid "attente"
+msgstr "En attente"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,etat_prod:0
+msgid "attente BAT"
+msgstr "Attente BAT"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,etat_prod:0
+msgid "attente liv"
+msgstr "Attente livraison"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_fond_perdu
+msgid "bleed"
+msgstr "Fond Perdu"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "cHamp of products calculated in configurator print shop"
+msgstr "Produit calculer dans le calculateur printShop"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.grand_format_menu
+msgid "calcul devis G.F"
+msgstr "Calculatuer de prix produit grand format"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.mrp_production_add_costs_form_view
+msgid "charge en +"
+msgstr "Charge en supplément "
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "clichet"
+msgstr "Clichet ou forme"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_code_id
+msgid "code_id"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_collage_id
+msgid "collage"
+msgstr "Collage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_color
+msgid "color"
+msgstr "Couleur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_compagne
+msgid "compagne"
+msgstr "compagne"
+
+#. module: offset_printshop 6
+#: selection:offredeprix.product,etat_devis:0
+msgid "confirmer"
+msgstr "confirmer"
+
+#. module: offset_printshop 6
+#: selection:offredeprix.product,etat_devis:0
+msgid "convertit en DC"
+msgstr "convertit en DC"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_cout_total_cout
+msgid "cout Total"
+msgstr "cout Total"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_cout_total_charge
+msgid "cout charge en +"
+msgstr "cout charge en +"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_cout_total_machines
+msgid "cout machines"
+msgstr "cout machines"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_cout_total_matieres
+msgid "cout matieres"
+msgstr "cout matieres"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_cout_unitaire
+msgid "cout unitaire"
+msgstr "cout unitaire"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_bom_desc_tech 6.field_mrp_bom_line_desc_tech
+msgid "description technique"
+msgstr "description technique"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_offredeprix_product_tree_view
+#: model:ir.ui.menu,name:offset_printshop 6.offredeprix_product_menu
+msgid "devis"
+msgstr "devis"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_partner_email
+msgid "email_client"
+msgstr ""
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "emballage"
+msgstr "emballage"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_matieres:0
+msgid "emballage_carton"
+msgstr "emballage_carton"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_embossing
+msgid "embossing"
+msgstr "embossing"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,etat_prod:0
+msgid "en impression"
+msgstr "en impression"
+
+#. module: offset_printshop 6
+#: selection:offredeprix.product,etat_devis:0
+msgid "envoye"
+msgstr "envoye"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.view_mrp_production_filter_ext
+msgid "etat"
+msgstr "etat"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_etat_devis
+msgid "etat devis"
+msgstr "etat devis"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_etat_prod
+msgid "etat prod"
+msgstr "Etat de production"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,etat_prod:0
+msgid "finition"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_finition_pel
+msgid "finition 1"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_finition_dec
+msgid "finition 2"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_finition_pliage
+msgid "finition 3"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_finition_piquage
+msgid "finition 4"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_finition_collage
+msgid "finition 5"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_finition_vernis
+msgid "finition 6"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "frome decoupe"
+msgstr "forme découpe"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_marge 6.field_printshop2_setting_marge
+msgid "general marge"
+msgstr "Marge générale"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "gluing"
+msgstr "Collage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_longueur_ferme_inter
+msgid "lenght Closed interior"
+msgstr "longueur fermé interieur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_longueur_contrecollage
+msgid "lenght Sheet lamination cardbord"
+msgstr "longueur contre collage carton"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_longueur_ferme
+msgid "lenght closed"
+msgstr "longueur fermé "
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_longueur_rouleau
+msgid "lenght roll"
+msgstr "Longueur rouleau"
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_offset_printshop_priceline_tree_view
+#: model:ir.ui.menu,name:offset_printshop 6.printshop_priceline_menu
+msgid "ligne offset priceline"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_printshop_supportpell_line_tree_view
+#: model:ir.ui.menu,name:offset_printshop 6.printshop_supportpells_line_menu
+msgid "ligne supportpells offset"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_printshop_support_line_tree_view
+#: model:ir.ui.menu,name:offset_printshop 6.printshop_supports_line_menu
+msgid "ligne supports offset"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_line_ids
+msgid "lines du devis"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offredeprix_product_search_view
+#: 6.offredeprix_product_tree_view
+msgid "liste devis"
+msgstr "liste devis"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,etat_prod:0
+msgid "litige"
+msgstr "litige"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,etat_prod:0
+msgid "livraison partielle"
+msgstr "livraison partielle"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_machine_id
+msgid "machine"
+msgstr "machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_machine_ids
+#: 6.field_offset_printshop_machine_ids_inter
+msgid "machines"
+msgstr "Machines"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_machine_max_gr_print
+msgid "maximum Gr"
+msgstr "Grammage maximum à imprimer"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_charge_fixe_amount
+msgid "montant"
+msgstr "montant"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_mrp_bom_line
+msgid "mrp.bom.line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_mrp_production_charge_fixe
+msgid "mrp.production.charge.fixe"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_profil_setting
+msgid "name"
+msgstr "nom"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_nbr_callage
+msgid "nbr calage machine"
+msgstr "Nbr Calage machine"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_coul_verso
+msgid "nbr color Back"
+msgstr "Couleur verso "
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_nbr_coul_recto
+msgid "nbr color Front"
+msgstr "Couleur recto "
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_color
+msgid "nbr of color"
+msgstr "nbr de couleurs"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_side
+msgid "nbr of side"
+msgstr "Nbr de Face"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_nbr_insolation
+msgid "nbr plate insolation"
+msgstr "Nbr de plaque"
+
+#. module: offset_printshop 6
+#: selection:offredeprix.product,etat_devis:0
+msgid "non competitif"
+msgstr "non competitif"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,type_prod:0
+msgid "numerique"
+msgstr "numerique"
+
+#. module: offset_printshop 6
+#: model:ir.ui.menu,name:offset_printshop 6.offredeprix
+msgid "offre de prix client"
+msgstr "offre de prix client"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_line_offre_id
+msgid "offre_id"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_offredeprix_product
+msgid "offredeprix_product"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_offredeprix_product_line
+msgid "offredeprix_product line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: selection:mrp.production,type_prod:0
+msgid "offset"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_id_5335
+msgid "optimal line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_other_product_line
+msgid "other_price_product line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_emballage_id
+msgid "packaging"
+msgstr "Emballage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_paper
+msgid "paper"
+msgstr "papier"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+#: selection:mrp.production,etat_prod:0
+msgid "pelliculage"
+msgstr "pelliculage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_quantite_price_qtes
+msgid "prices qty"
+msgstr "Prix qté"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_line_nbr_tirage
+msgid "print"
+msgstr "Impression"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_support_id_inter
+msgid "print media inside"
+msgstr "Support d'impression intérieur"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.printshop2_machine_tree_view
+msgid "printing machine sheet"
+msgstr "Machine impression feuille"
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop_machine
+msgid "printshop Machine"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop_rigide_line
+msgid "printshop Rigide line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop_support
+msgid "printshop Support"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop_support_line
+msgid "printshop Support line"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.actions.act_window,name:offset_printshop
+#: 6.action_printshop_pricelist_tree_view
+#: model:ir.ui.menu,name:offset_printshop 6.printshop_pricelist_menu
+msgid "printshop pricelist"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop_rigide
+msgid "printshop rigide"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_machine
+msgid "printshop2 Machine"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_support
+msgid "printshop2 Support"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_type_support
+msgid "printshop2 Type Support"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_setting
+msgid "printshop2 admin setting"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_quantite
+msgid "printshop2 quantite"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_remise
+msgid "printshop2 remise"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_suportpell
+#: 6.model_printshop2_supportpell
+msgid "printshop2 support pelliculage"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_variantes_finition
+msgid "printshop2 variantes finition"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop
+#: 6.model_printshop2_variantes_pelliculage
+msgid "printshop2 variantes pelliculage"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_variantes_print
+msgid "printshop2 variantes print"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model,name:offset_printshop 6.model_printshop2_variantes_support
+msgid "printshop2 variantes support"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_support_prix_kg
+msgid "prix du KG"
+msgstr "prix du KG"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_pricelist_qte_bom_price
+msgid "prix unitaire revient"
+msgstr "prix de revient  unitaire"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_pricelist_qte_listprice
+msgid "prix unitaire vente"
+msgstr "prix unitaire vente"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_support_line_laize_support
+msgid "product_id.laize_rouleau"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_rigide_line_longueur_rigide
+msgid "product_id.longueur_calcul"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_rigide_line_prix_rigide
+#: 6.field_printshop_support_line_prix_support
+msgid "product_id.standard_price"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_product_id
+#: 6.field_printshop_pricelist_product_id
+#: 6.field_printshop_pricelist_product_tmpl_id
+msgid "produit"
+msgstr "produit"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_bom_line_constante
+msgid "produit constant"
+msgstr "produit constant"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.sale_order_form_configurator
+msgid "produit offset (search)"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_machine_qualite
+msgid "qualite"
+msgstr "Qualité "
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_line_quantite
+#: 6.field_printshop_pricelist_quantite
+msgid "quantite"
+msgstr "quantite"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_quantite_quantites
+msgid "quantity"
+msgstr "Quantité"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,help:offset_printshop
+#: 6.field_offset_printshop_machine_ids_inter
+msgid "rajouter les machines pour calculer l'impression"
+msgstr "rajouter les machines pour calculer l'impression"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop2_setting_raw_marge
+msgid "raw maetriel marge"
+msgstr " matiere premiere marge"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_prix_qte_cout_mat
+#: model:ir.ui.menu,name:offset_printshop 6.printshop_articles
+msgid "raw materials"
+msgstr "Matieres premieres"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_raw_marge
+msgid "raw materiels marge"
+msgstr " matiere premiere marge"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.offredeprix_product_search_form_view 6.offset_printshop_search_form_view
+msgid "recherche"
+msgstr "recherche"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offredeprix_product_name
+msgid "ref devis"
+msgstr "ref devis"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_printshop_rigide_line_rigide_id
+msgid "rigide"
+msgstr "Rigide"
+
+#. module: offset_printshop 6
+#: selection:product.template,type_production:0
+msgid "sewing"
+msgstr "Couture"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_size 6.field_offset_printshop_size
+msgid "size"
+msgstr "Format"
+
+#. module: offset_printshop 6
+#: selection:mrp.production,etat_prod:0
+msgid "solder"
+msgstr "solder"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_spirale_id
+msgid "spirale"
+msgstr "spirale"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.printshop2_supportpell_form_view
+#: 6.printshop_supportpell_line_tree_view
+msgid "supportpells"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.printshop2_support_form_view
+#: 6.printshop_support_line_tree_view
+msgid "supports"
+msgstr "supports"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_surface_traitement
+msgid "surface traitement"
+msgstr " traitement de surface"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.offset_printshop_form_view
+msgid "tmeplate creer"
+msgstr "Template crée"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_laminate
+msgid "type laminate"
+msgstr "Type de laminage"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_marque_support3
+msgid "type of paper"
+msgstr "type papier"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_type_paper
+msgid "type paper"
+msgstr "type papier"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_mrp_production_type_prod
+msgid "type production"
+msgstr "Type de production"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.product_template_search_view_offset
+msgid "type_offset"
+msgstr ""
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "update Paper name"
+msgstr "Mettre a jour Nom papier"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop
+#: 6.printshop_product_template_view_form
+msgid "update Roll name"
+msgstr "Mettre a jour Nom rouleau"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_user_id
+msgid "user calculator"
+msgstr " user calculateur"
+
+#. module: offset_printshop 6
+#: model:ir.ui.view,arch_db:offset_printshop 6.view_mrp_production_filter_ext
+msgid "utilisateur"
+msgstr "utilisateur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_serigraphie_id
+#: 6.field_offset_printshop_serigraphie_int_id
+msgid "varnish"
+msgstr "vernis"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_priceline_weight
+msgid "weight"
+msgstr "Poids"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_largeur
+msgid "width "
+msgstr "Largeur"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_offset_printshop_largeur_contrecollage
+msgid "width Sheet lamination cardbord"
+msgstr "longueur contre collage carton"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_largeur_support
+msgid "width print media"
+msgstr "largeur support"
+
+#. module: offset_printshop 6
+#: model:ir.model.fields,field_description:offset_printshop
+#: 6.field_product_template_laize_rouleau
+msgid "width roll"
+msgstr "laize rouleau"
+
+#. module: offset_printshop 6
+#: selection:offset.printshop,nbr_pelliculage:0
+#: selection:offset.printshop,nbr_serigraphie:0
+#: selection:offset.printshop,nbr_serigraphie_int:0
+msgid "without"
+msgstr "Sans"

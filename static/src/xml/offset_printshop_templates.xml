@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+	<!-- Adds all assets in Odoo -->
+        <template id="printshop_assets_backend" name="static_resources_printshop assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+<!--These links will be called when loading your Odoo -->
+                <link rel="stylesheet" href="offset_printshop 6/static/src/css/offset_printshop.css"/>
+            </xpath>		         <!-- All links to CSS and JS files should be added in here. -->
+        </template>
+    </data>
+</openerp>

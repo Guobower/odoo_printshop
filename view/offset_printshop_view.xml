@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem name="PRINT SHOP" id="menu_printshop"   sequence="10" web_icon="offset_printshop,static/description/icon.png"/>
+
+	<menuitem name="Calculator" id="Sheet_printshop_menu"  parent="menu_printshop" icon="terp-partner"  sequence="10"/>
+
+	<menuitem name="Sheet Printshop" id="offset_applat_parent_menu" parent="Sheet_printshop_menu" icon="terp-partner" sequence="10" />
+	<menuitem name="Technical Configuration" parent="Sheet_printshop_menu" id="offset_conf_menu" icon="terp-partner" />
+        
+	<record model="ir.ui.view" id="printshop2_setting_form_view">
+		<field name="name">printshop2.setting.form</field>
+		<field name="model">printshop2.setting</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Admin setting Printshop sheet">
+				<group>
+					<field name="name" />
+					<field name="bleed" />
+					<field name="remise_id" />
+					<field name="tolerance" />
+					<field name="marge" />
+					<field name="raw_marge" />
+                                        <field name="description" />
+
+				</group>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="printshop_setting_tree_view">
+		<field name="name">printshop2.setting.tree</field>
+		<field name="model">printshop2.setting</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Print media">
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_printshop_setting_tree_view">
+		<field name="name"> Admin setting </field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">printshop2.setting</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="printshop_setting_menu" parent="offset_conf_menu"
+				  action="action_printshop_setting_tree_view" />
+	<record id="printshop2_machine_form_view" model="ir.ui.view">
+		<field name="name">printshop2.machine.form</field>
+		<field name="model">printshop2.machine</field>
+		<field name="arch" type="xml">
+			<form>
+                    <header>
+                                					<field name="typeshop" widget='radio' options="{'horizontal': true}"/>
+
+                        </header>
+				<group col="6" colspan="4">
+
+					<field name="name" />
+					<field name="typeprinter" widget='radio' options="{'horizontal': true}" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+					<field name="sous_traitance" />
+				</group>
+				<group >
+					<newline />
+					<group col="4" colspan="2">
+						<field name="larg_mach" />
+						<field name="long_mach" />
+						<field name="nbr_coul_mach" />
+					</group>
+					<group col="4" colspan="2">
+						<field name="nbr_passe" />
+						<field name="prise_pince" />
+						<field name="max_gr_print" />
+						<field name="mini_cost_tirage" />
+
+
+
+					</group>
+					<group col="4" colspan="2">
+						<field name="print_id"  options="{'no_create': True}"/>
+						<field name="insolation_id" domain="[('type_production', '=','insolation')]" options="{'no_create': True}" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+						<field name="calage_id" domain="[('type_production', '=','calage')]" options="{'no_create': True}" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+					
+					
+					
+					</group>
+				</group>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="printshop2_machine_tree_view">
+		<field name="name">printshop2.machine.tree</field>
+		<field name="model">printshop2.machine</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="printing machine sheet">
+				<field name="name" />
+                                				<field name="typeshop" />
+
+				<field name="typeprinter" widget='radio' options="{'horizontal': true}"/>
+				<field name="sous_traitance" />
+				<field name="larg_mach" />
+				<field name="long_mach" />
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_printshop2_machine_tree_view">
+		<field name="name">Setting printing Machine</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">printshop2.machine</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="printshop2_machines_menu" parent="offset_conf_menu"
+				  action="action_printshop2_machine_tree_view" />
+
+	<record model="ir.ui.view" id="printshop2_support_line_tree_view">
+		<field name="name">printshop2.support.line.tree</field>
+		<field name="model">printshop2.support.line</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree editable="top" string="supports" colors="red: list_price &lt; (prix_support*marge_support)">
+       				<field name="actif" />
+
+				<field name="product_id" domain="[('type_matieres', '=','support_offset')]"/>
+				<field name="largeur_support" />
+				<field name="longueur_support" />
+				<field name="list_price" />
+				<field name="prix_support" required="True"/>
+                                <button name="compute_sheet" type="object" string="sheet calculs" class="oe_stat_button" icon="fa-gears" />
+
+				<field name="kg_support" />
+				<field name="marque_support" />
+				<field name="marge_support" />
+
+			</tree>
+		</field>
+	</record>
+	<record id="view_printshop2_support_line_filter" model="ir.ui.view">
+		<field name="name">printshop2_support_line serach</field>
+		<field name="model">printshop2.support.line</field>
+		<field name="arch" type="xml">
+			<search string="Search marque">
+				<field name="product_id"/>
+				<field name="marque_support"/>
+			</search>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_printshop2_support_line_tree_view">
+		<field name="name">ligne supports media</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">printshop2.support.line</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_printshop2_support_line_filter"/>
+	</record>
+	<menuitem id="printshop2_supports_line_menu" parent="offset_conf_menu"
+				  action="action_printshop2_support_line_tree_view" />
+
+
+
+	<record model="ir.ui.view" id="offset_printshop_priceline_tree_view">
+		<field name="name">ligne priceline</field>
+		<field name="model">offset.printshop.priceline</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="ligne of calculate price" >
+				<field name="printshop_id" />
+
+       				<field name="name" />
+
+				<field name="quantites" />
+				<field name="prix_qte_sale" />
+
+				<field name="prix_qte" />
+				<field name="prix_qte_cout_mat" />
+
+				<field name="description" />
+			</tree>
+		</field>
+	</record>
+        
+        	<record model="ir.ui.view" id="offset_printshop_priceline_form_view">
+		<field name="name">ligne priceline form</field>
+		<field name="model">offset.printshop.priceline</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="ligne of calculate price" >
+       
+       <group col="6" colspan="4">
+				<field name="printshop_id" />
+
+       				<field name="name" />
+
+				<field name="quantites" />
+				<field name="prix_qte_sale" />
+
+				<field name="prix_qte" />
+				<field name="prix_qte_cout_mat" />
+
+				<field name="description" />
+                                </group>
+			</form>
+		</field>
+	</record>
+
+
+	<record id="offset_printshop_priceline_search_view" model="ir.ui.view">
+		<field name="name">ligne priceline search</field>
+		<field name="model">offset.printshop.priceline</field>
+		<field name="arch" type="xml">
+			<search string="Search">
+				<field name="printshop_id"/>
+				<field name="name"/>
+			</search>
+		</field>
+	</record>
+
+
+	<record model="ir.actions.act_window" id="action_offset_printshop_priceline_tree_view">
+		<field name="name">ligne priceline</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">offset.printshop.priceline</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="offset_printshop_priceline_search_view"/>
+
+	</record>
+	<menuitem id="printshop_priceline_menu" parent="offset_conf_menu"
+				  action="action_offset_printshop_priceline_tree_view" />
+	<record model="ir.ui.view" id="offset_printshop_form_view">
+		<field name="name">offset.printshop.form</field>
+		<field name="model">offset.printshop</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form class="o_sale_order">
+       
+       <header>
+           <div class="container-fluid"> 
+
+               </div>
+
+           </header>
+				<sheet  >
+        
+
+					<div class="oe_button_box" name="compute_qte_1" >
+						<button name="compute_qte_1" type="object"
+                                class="oe_stat_button" icon="fa-gears" string="Calcul Price"></button>
+						<button name="generate_product_ok" type="object"
+                                class="oe_stat_button" icon="fa-tags" string="Create product"></button>
+						<button name="generate_bom" type="object"
+                                class="oe_stat_button" icon="fa-table" string="Create Bom"></button>
+                                		<button name="generate_list_price" type="object"
+                                class="oe_stat_button" icon="fa-table" string="Create List price for template"></button>
+					</div>
+                                        
+                                        
+
+       
+
+                                        <group>
+						<field name="typeshop"  style="color:#c71585; font-weight: bold; font-size: 22px; " string="Domaine shop"/> 
+
+                						<field name="type_offset" widget='radio' options="{'horizontal': true}" class="oe_slogan" icon="fa-gears" style="color:#875A7B;" 
+                                                                attrs="{'invisible':[('typeshop','not in',('offsetprinting'))],'required':[('typeshop','in',('offsetprinting'))]}"/>
+                                        </group>
+					<group>
+					</group>
+					<div class="panel panel-primary">
+						<group>
+							<group >
+								<field name="partner_id" options="{'limit': 10, 'create': False, 'create_edit': False}"/>
+								<field name="imprime" string="Product" />
+								<field name="name" string="N° Quote" />
+								<field name="date" string="Date" />
+								<field name="parent_id" options="{'no_create': True}"/>
+							</group>
+							<group>
+								<field name="desc_ventes" class="oe_read_only" />
+							</group>
+						</group>
+					</div>
+					<field name="profil_setting" widget='selection' colspan="4" />
+					<group>
+						<group  class="panel panel-warning">
+							<field name="Multiqty" widget="one2many" string='Quantity'>
+								<tree editable="top"  >
+									<field name="quantites"  />
+								</tree>
+							</field>
+						</group>
+						<group  class="panel panel-warning">
+							<field name="remise_id"  groups="sales_team.group_sale_manager" string="Discount"/>
+							<field name="priceline_ids"  string='Prices table' domain="[('printshop_id', '=',printshop_id)]" class="table" options="{'no_create': True}">
+								<tree editable="top">
+									<field name="quantites" />
+									<field name="prix_qte" />
+                                                                        <field name="total_prix_qte" groups="sales_team.group_sale_manager"/>
+
+									<field name="prix_qte_cout_mat"  groups="sales_team.group_sale_manager"/>
+									<field name="prix_qte_sale" />
+								</tree>
+							</field>
+						</group>
+					</group>
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h2 class="panel-title" attrs="{'invisible':['|', ('type_offset','in',('applat','sac','boite','depliant')),('typeshop','not in',('offsetprinting'))]}">Description</h2>
+							<h2 class="panel-title" attrs="{'invisible':['|', ('type_offset','in',('applat','sac','boite','depliant')),('typeshop','not in',('offsetprinting'))]}">Couverture</h2>
+						</div>
+						<group >
+							<group string="Size">
+								<field name="largeur_sac" attrs="{'invisible': [('type_offset','not in',('sac'))]}"/>/>
+								<field name="hauteur" attrs="{'invisible': [('type_offset','not in',('sac'))]}"/>
+								<field name="soufflet" attrs="{'invisible': [('type_offset','not in',('sac'))]}"/>>
+								<field name="hauteur_boite" attrs="{'invisible': [('type_offset','not in',('boite'))]}"/>>
+								<field name="largeur_boite" attrs="{'invisible': [('type_offset','not in',('boite'))]}"/>>
+								<field name="profondeur_boite" attrs="{'invisible': [('type_offset','not in',('boite'))]}"/>>
+								<field name="largeur" />
+								<field name="longueur" color= "##0000FF" />
+								<field name="largeur_ferme" attrs="{'invisible': [('type_offset','in',(False,'sac','applat','boite'))]}"/>
+								<field name="longueur_ferme" attrs="{'invisible': [('type_offset','in',(False,'sac','applat','boite'))]}"/>
+								<field name="nbr_pages" required= "True" widget='radio' options="{'horizontal': true}"/>
+								<field name="nbr_coul_recto" widget='radio' options="{'horizontal': true}"/>
+								<field name="nbr_coul_verso" widget='radio' options="{'horizontal': true}" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+								<field name="support_id" required= "True" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                                                                <field name="support_line_id_2" readonly="1">
+                                                                <tree >
+       				<field name="actif" />
+
+				<field name="name" />
+				<field name="largeur_support" />
+				<field name="longueur_support" />
+
+			</tree>
+		</field>
+
+								<field name="support_fournis" />
+                                                                                                    
+
+                                                            
+							</group>
+							<group string="Finition"  >
+								<newline />
+								<h4 class="oe_slogan" style="color:#875A7B; text-align: left;">Surface treatment</h4>
+								<newline />
+								<field name="nbr_pelliculage" widget='radio' options="{'horizontal': true}" attrs="{'invisible':[('type_pelliculage','in',(False))]}"/>
+								<field name="type_pelliculage"  widget="selection" />
+                                                                <field name="pelliculage_ids" readonly="1" attrs="{'invisible':[('type_pelliculage','in',(False))]}">
+                                                                <tree >
+       				<field name="actif" />
+
+				<field name="name" />
+				<field name="laize_rouleau" />
+				<field name="longueur_rouleau" />
+
+			</tree>
+		</field>								<field name="serigraphie_id" domain="[('type_production', '=','traitement_surface')]" widget="selection" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+								<field name="nbr_serigraphie" widget='radio' options="{'horizontal': true}" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+								<newline />
+								<div attrs="{'invisible': [('type_offset','in',(False,'applat','sac'))]}">
+									<h4 class="oe_slogan" style="color:#875A7B; text-align: left;">Folding</h4>
+								</div>
+								<newline />
+								<field name="pliage_id" domain="[('type_production', '=','pliage')]" widget="selection"  attrs="{'invisible': [('type_offset','in',(False,'applat','sac'))]}"/>
+								<newline />
+								<div attrs="{'invisible': [('type_offset','in',(False))]}">
+								<h4 class="oe_slogan" style="color:#875A7B; text-align: left;">Cutting</h4></div>
+								<newline />
+								<field name="form_decoupe_id" string="frome decoupe" domain="[('type_matieres', '=','clichet')]" widget="selection" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+								<field name="decoupe_id" domain="[('type_production', '=','decoupe_offset')]" widget="selection" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+								<field name="poses_forme" attrs="{'invisible': [('decoupe_id','=',False)]}"/>
+								<newline />
+								<div attrs="{'invisible': [('type_offset','in',('sac','depliant'))]}" >
+									<h4 class="oe_slogan" style="color:#875A7B; text-align: left;">support laminate</h4>
+								</div>
+								<newline />
+								<field name="contrecollage" attrs="{'invisible': [('type_offset','in',('sac','depliant'))]}"/>
+								<field name="contrecollage_id" domain="[('type_production', '=','collage')]" widget="selection" attrs="{'invisible': [('contrecollage','=',False)]}"/>
+								<field name="qte_contrecollage"  attrs="{'invisible': [('contrecollage','=',False)]}"  widget='radio' options="{'horizontal': true}"/>
+								<field name="largeur_contrecollage"  attrs="{'invisible': [('contrecollage','=',False)]}" required= "{'True' :[('contrecollage','=',True)]}"  />
+								<field name="longueur_contrecollage"  attrs="{'invisible': [('contrecollage','=',False)]}" required= "{'True' :[('contrecollage','=',True)]}" />
+								<field name="support_id_rigide"  attrs="{'invisible': [('contrecollage','=',False)]}" />
+								<newline />
+								
+
+									
+            
+									<separator string="Suspension rod" attrs="{'invisible': [('typeshop','in',(False,'offsetprinting'))]}"/>
+									<newline/>
+									<field name="baguette_id" widget="radio" domain="[('type_matieres', '=','baguette')]" attrs="{'invisible': [('typeshop','in',(False,'offsetprinting'))]}"/>
+									<field name="qte_baguettes" attrs="{'invisible': [('baguette_id','=',False)]}"/>
+								
+									<separator string="Sewing" attrs="{'invisible': [('typeshop','in',(False,'offsetprinting'))]}"/>
+									<newline/>
+									<field name="couture_id" widget="radio" domain="[('type_production', '=','couture')]" attrs="{'invisible': [('typeshop','in',(False,'offsetprinting'))]}"/>
+									<separator string="Eyelets" attrs="{'invisible': [('typeshop','in',(False,'offsetprinting'))]}" />
+									<newline/>
+									<field name="oeillet_id" widget="radio" domain="[('type_matieres', '=','oeillet')]" attrs="{'invisible': [('typeshop','in',(False,'offsetprinting'))]}"/>
+									<field name="oeillets" attrs="{'invisible': [('oeillet_id','=',False)]}"/>
+								</group>
+                                                        
+						</group>
+					</div>
+					<div class="panel panel-info" attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}">
+						<div class="panel-heading" attrs="{'invisible': [('type_offset','in',('applat','sac','boite','depliant'))]}">
+							<h2 class="panel-title">Interieur</h2>
+						</div>
+						<group  attrs="{'invisible': [('type_offset','in',('applat','sac','boite','depliant'))]}" >
+							<group string="Size">
+                                                                <field name="largeur_inter_bloc" attrs="{'invisible': [('type_offset','not in',('blocnote'))]}"/>
+                                                                <field name="longueur_inter_bloc" attrs="{'invisible': [('type_offset','not in',('blocnote'))]}"/>
+                                                    
+								<field name="largeur_inter" attrs="{'invisible': [('type_offset','not in',('brochure'))]}"/>
+								<field name="longueur_inter" attrs="{'invisible': [('type_offset','not in',('brochure'))]}"/>
+								<field name="largeur_ferme_inter" attrs="{'invisible': [('type_offset','not in',('brochure'))]}"/>
+								<field name="longueur_ferme_inter" attrs="{'invisible': [('type_offset','not in',('brochure'))]}"/>
+								<field name="nbr_pages_brochure"   attrs="{'invisible': [('type_offset','not in',('brochure'))]}" required= "{'True' :[('type_offset','in',('brochure'))]}"/>
+								<field name="souches"  attrs="{'invisible': [('type_offset','not in',('carnet'))]}" required= "{'True' :[('type_offset','in',('carnet'))]}"/>
+								<field name="nbr_souches_carnet" attrs="{'invisible': [('type_offset','not in',('carnet'))]}" required= "{'True' :[('type_offset','in',('carnet'))]}"/>
+								<field name="nbr_feuille_bloc"  attrs="{'invisible': [('type_offset','not in',('blocnote'))]}" required= "{'True' :[('type_offset','in',('blocnote'))]}"/>
+								<field name="nbr_pages_inter"  widget='radio' options="{'horizontal': true}"  />
+								<field name="nbr_coul_r_v"  attrs="{'invisible': [('type_offset','not in',('brochure'))]}" widget='radio' options="{'horizontal': true}"/>
+								<field name="nbr_coul_recto_inter" attrs="{'invisible': [('type_offset','in',('brochure'))]}" widget='radio' options="{'horizontal': true}"/>
+								<field name="nbr_coul_verso_inter" attrs="{'invisible': [('type_offset','in',('brochure'))]}" widget='radio' options="{'horizontal': true}"/>
+								<field name="support_id_inter"  options="{'limit': 10, 'create': False, 'create_edit': False}" />
+                                                                <field name="support_line_id_inter_2" readonly="1">
+                                                                                                                            <tree editable="top"  >
+                                                                                            <field name="actif" />
+
+                                                                                            <field name="name" />
+                                                                                            <field name="largeur_support" />
+                                                                                            <field name="longueur_support" />
+
+                                                                                    </tree>
+                                                                            </field>                                                                                                                            						
+                                                                                                                            						
+							</group>
+							<group string="Finition">
+								<newline />
+                                                                <h4 class="oe_slogan" style="color:#875A7B; text-align: left;">Surface treatment</h4>
+								<newline />
+								<field name="nbr_pelliculage_inter" widget='radio' options="{'horizontal': true}" attrs="{'invisible':[('type_pelliculage_inter','in',(False))]}"/>
+								<field name="type_pelliculage_inter"  widget="selection" />
+                                                                <field name="pelliculage_ids_inter" readonly="1" attrs="{'invisible':[('type_pelliculage_inter','in',(False))]}">
+                                                                <tree >
+       				<field name="actif" />
+
+				<field name="name" />
+				<field name="laize_rouleau" />
+				<field name="longueur_rouleau" />
+
+			</tree>
+		</field>
+								<field name="serigraphie_id_inter" domain="[('type_production', '=','traitement_surface')]" widget="selection"/>
+								<field name="nbr_serigraphie_inter" widget='radio' options="{'horizontal': true}"/>
+								<newline />
+								<div attrs="{'invisible': [('type_offset','in',('applat','sac'))]}">
+									<h4 class="oe_slogan" style="color:#875A7B; text-align: left;">Folding</h4>
+								</div>
+								<newline />
+								<field name="pliage_id_inter" domain="[('type_production', '=','pliage')]" widget="selection"  attrs="{'invisible': [('type_offset','in',('applat','sac'))]}"/>
+								<newline />
+								<h4 class="oe_slogan" style="color:#875A7B; text-align: left;">Cutting</h4>
+								<newline />
+								<field name="form_decoupe_id_inter" string="frome decoupe" domain="[('type_matieres', '=','clichet')]" widget="selection"/>
+								<field name="decoupe_id_inter" domain="[('type_production', '=','decoupe_offset')]" widget="selection"/>
+								<field name="poses_forme_inter" attrs="{'invisible': [('form_decoupe_id','=',True)]}"/>
+								<newline />
+								<separator string="Assemblage" />
+								<separator string="   " />
+                                                                <button name="compute_dos_livre" type="object" icon="fa-gears" string="Book tickness"></button>
+                                                                <newline />
+
+                                                                <field name="dos_livre" />
+                                                                <field name="ref_spiral" />
+								<field name="collage_id" domain="[('type_production', 'like','collage')]" widget="selection" attrs="{'invisible': [('type_offset','in',(False,'applat','depliant'))]}"/>
+
+								<field name="piquage_id"  domain="[('type_production', 'like','piquage')]" widget="selection"/>
+								<field name="spirale_id" domain="[('type_matieres', 'like','spirale')]" widget="selection"/>
+								<field name="nbr_spirale" attrs="{'invisible': [('spirale_id','=',False)]}" required= "{'True' :[('spirale_id','=',True)]}"/>
+							</group>
+						</group>
+					</div>
+                                        
+                                        <div>
+                                            <h4 class="oe_slogan" style="color:#875A7B; text-align: left;">Others</h4>
+								<newline />
+                                                       								<field name="accessoires_ids">
+						<tree editable="top" string="Accessoires" >
+
+							<field name="product_id" />
+							<field name="quantite" />
+							<field name="prix" />
+
+                                                    
+						</tree>
+					</field>
+                                            
+                                            </div>
+					<div class="panel panel-info">
+						<group colspan="4" col="4">
+							<group>
+								<field name="emballage_id"  domain="[('type_matieres', '=like','emballage')]" widget="selection"/>
+								<field name="qte_emballage"  attrs="{'invisible': [('emballage_id','=',False)]}" required= "{'True' :[('emballage_id','=',True)]}" />
+							</group>
+							<group>
+								<field name="emballage_carton_id"  domain="[('type_matieres', 'like','emballage_carton')]" widget="selection"/>
+								<field name="qte_emballage_carton"  attrs="{'invisible': [('emballage_carton_id','=',False)]}" required= "{'True' :[('emballage_carton_id','=',True)]}" />
+							</group>
+						</group>
+					</div>
+					<notebook>
+						<page string='Informations Générales'>
+							<group >
+								<separator string="Machines" />
+								<group colspan="2">
+									<img src="offset_printshop/static/src/img/machine-offset.png"  width="35%" attrs="{'invisible':[('typeshop','not in',('signsheet'))]}"/>
+								
+									<field name="machine_ids"  widget="checkbox" nolabel='1' attrs="{'invisible':[('typeshop','not in',('offsetprinting'))]}"/>
+                                                    <field name="machine_ids2_inter"  widget="checkbox" attrs="{'invisible': [('type_offset','in',(False,'applat','sac','boite','depliant'))]}"/>
+                                                    <field name="machine_ids_roll"  widget="checkbox" attrs="{'invisible':[('typeshop','not in',('signroll'))]}"/>
+                                                    <field name="machine_ids_signsheet"  widget="checkbox" nolabel='1' attrs="{'invisible':[('typeshop','not in',('signsheet'))]}"/>
+
+								</group>
+								<!-- <tree editable="top" string="Calculs" colors="blue:optimal=='no';red:optimal=='yes'"> -->
+							</group>
+                                                        
+						</page>
+						<page string="Calculs">
+							<field name="line_ids"  groups="sales_team.group_sale_manager">
+								<tree  string="Calculs">
+									<field name="machine_id"/>
+									<field name="poses_machine"/>
+									<field name="support_id"/>
+									<field name="poses_support"/>
+									<field name="nbr_feuille"/>
+									<field name="nbr_callage"/>
+									<field name="nbr_insolation"/>
+									<field name="nbr_tirage"/>
+									<field name="cout"/>
+									<field name="cout_pelliculage"/>
+									<field name="nbr_pose_pel"/>
+									<field name="laize_pel"/>
+									<field name="compute"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Sub products">
+							<field name="quantite" string="Qty of subproducts view"/>
+							<field name="state"  widget="selection" />
+							<field name="subproduct_ids" >
+								<tree colors="red:subtotal in (0,00)">
+									<field name="product_id"/>
+									<field name="name"/>
+									<field name="product_qty" />
+									<field name="unit_price" groups="sales_team.group_sale_manager" />
+									<field name="subtotal" groups="sales_team.group_sale_manager" />
+									<field name="matieres" />
+								</tree>
+							</field>
+						</page >
+						<page string="Product create">
+							<group>
+								<field name="product_tmpl2_id" />
+								<field name="product_tmpl_id" />
+								<field name="product_categorie" />
+								<field name="bom_id" />
+							</group>
+						</page >
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="offset_printshop2_search_form_view" model="ir.ui.view">
+		<field name="name">offset.printshop2.search.form</field>
+		<field name="model">offset.printshop</field>
+		<field name="arch" type="xml">
+			<search string="recherche">
+				<field name="partner_id"/>
+				<field name="name"/>
+				<field name="imprime"/>
+				<field name="type_offset"/>
+                                				<field name="typeshop"/>
+
+			</search>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="offset_printshop_tree_view">
+		<field name="name">offset.printshop.tree</field>
+		<field name="model">offset.printshop</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Offset" colors="grey:state in ('done');red:product_tmpl_id != False">
+				<field name="name" />
+                                				<field name="typeshop" />
+
+				<field name="type_offset" />
+				<field name="imprime"/>
+				<field name="largeur"/>
+				<field name="longueur"/>
+				<field name="partner_id"/>
+				<field name="user_id"/>
+				<field name="date"/>
+				<field name="state"/>
+				<field name="product_tmpl_id"/>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_offset_printshop_tree_view">
+		<field name="name">Calculation price sheet printing</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">offset.printshop</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record id="action_offset_printshop_tree_view2" model="ir.actions.act_window.view">
+		<field eval="2" name="sequence" />
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="offset_printshop_form_view" />
+		<field name="act_window_id" ref="action_offset_printshop_tree_view" />
+	</record>
+	<record id="action_offset_printshop_from_view2" model="ir.actions.act_window.view">
+		<field eval="1" name="sequence" />
+		<field name="view_mode">tree</field>
+		<field name="view_id" ref="offset_printshop_tree_view" />
+		<field name="act_window_id" ref="action_offset_printshop_tree_view" />
+	</record>
+	<menuitem id="offset_printshop_menu" parent="offset_applat_parent_menu" action="action_offset_printshop_tree_view" name="Simple Product"/>
+        
+        
+  	<record model="ir.ui.view" id="printshop2_support_form_view">
+		<field name="name">printshop2.support.form</field>
+		<field name="model">printshop2.support</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Print Media">
+              <header>
+           <div class="container-fluid"> 
+                                    	<field name="typeshop"  style="color:#c71585; font-weight: bold; font-size: 22px; "/> 
+
+               </div>
+
+           </header>
+				<nav >
+					<div class="oe_button_box" >
+						<header>
+							<button name="write_papername" string="Update name " data-toggle="dropdown" type="object"/>
+                                                        <button name="Create_paperline" string="Update child " data-toggle="dropdown" type="object"/>
+
+						</header>
+					</div>
+				</nav>
+				<div>
+					<field name="name" />
+				</div>
+				<group col="6" colspan="4">
+					<field name="type_id" />
+					<field name="marque" />
+					<field name="grammage" />
+					<field name="couleur" />
+					<field name="prix_kg"/>
+					<field name="type"  />
+                                        <field name="marge_support"  />
+
+				</group>
+				<newline/>
+				<group>
+					<field name="line_ids2" >
+						<tree editable="top" domain="[('actif', '==' , 1)]">
+                 				<field name="actif"  />
+
+							<field name="name" />
+							<field name="largeur_support" />
+							<field name="longueur_support" />
+							<field name="list_price" />
+                                                        <button name="compute_listprice_sheet" type="object" string="update list price" class="oe_stat_button" icon="fa-gears" />
+
+
+							<field name="prix_feuille" />
+                                                             <button name="compute_sheet" type="object" string="sheet calculs" class="oe_stat_button" icon="fa-gears" />
+
+							<field name="prix_kg" />
+							<field name="marque_support" />
+
+						</tree>
+					</field>
+                                        					
+
+				</group>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="printshop2_support_tree_view">
+		<field name="name">printshop2.support.tree</field>
+		<field name="model">printshop2.support</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Print media">
+				<field name="name" />
+				<field name="grammage" />
+				<field name="prix_kg" />
+
+				<field name="marque" />
+ 
+                                    	<field name="typeshop"  /> 
+
+
+
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_printshop2_support_tree_view">
+		<field name="name">Sheet Printing Media</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">printshop2.support</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="Category Sheet  print media" id="printshop2_supports_menu" parent="printshop_articles"
+				  action="action_printshop2_support_tree_view" />
+                                  
+                                  
+ 	<record model="ir.ui.view" id="printshop2_rigide_form_view">
+		<field name="name">printshop2.rigide.form</field>
+		<field name="model">printshop2.rigide</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Print Media">
+              <header>
+           <div class="container-fluid"> 
+                                    	<field name="typeshop"  style="color:#c71585; font-weight: bold; font-size: 22px; "/> 
+
+               </div>
+
+           </header>
+				<nav >
+					<div class="oe_button_box" >
+						<header>
+							<button name="write_papername" string="Update name " data-toggle="dropdown" type="object"/>
+                                                        <button name="Create_paperline" string="Update child " data-toggle="dropdown" type="object"/>
+
+						</header>
+					</div>
+				</nav>
+				<div>
+					<field name="name" />
+				</div>
+				<group col="6" colspan="4">
+					<field name="marque" />
+					<field name="grammage" />
+					<field name="couleur" />
+					<field name="prix_kg"/>
+				</group>
+				<newline/>
+				<group>
+					<field name="line_ids" domain="[('support_id', '=',id)]" >
+						<tree editable="top" string="supports" >
+                 				<field name="actif" />
+
+							<field name="product_id" />
+							<field name="largeur_support" />
+							<field name="longueur_support" />
+							<field name="list_price" />
+
+							<field name="prix_support" required="True"/>
+							<field name="kg_support" />
+							<field name="support_id" />
+                                                        <button name="size_media" string="Update size " data-toggle="dropdown" type="object"/>
+
+						</tree>
+					</field>
+				</group>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="printshop2_rigide_tree_view">
+		<field name="name">printshop2.rigide.tree</field>
+		<field name="model">printshop2.rigide</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Print media">
+				<field name="name" />
+				<field name="grammage" />
+				<field name="marque" />
+ 
+                                    	<field name="typeshop"  /> 
+
+
+
+			</tree>
+		</field>
+	</record>
+        
+        
+
+                
+
+        
+	<record model="ir.actions.act_window" id="action_printshop2_rigide_tree_view">
+		<field name="name">Sheet laminate Media</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">printshop2.rigide</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="Category Sheet  rigide  media" id="printshop2_rigides_menu" parent="printshop_articles"
+				  action="action_printshop2_rigide_tree_view" />
+                                  
+                                  
+	<record id="printshop2_type_pelliculage_form_view" model="ir.ui.view">
+		<field name="name">printshop2.type_pelliculage.form</field>
+		<field name="model">printshop2.type_pelliculage</field>
+		<field name="arch" type="xml">
+			<form>
+       <group>
+				<field name="name" />
+                                				<field name="description" />
+
+					<field name="line_ids2" >
+						<tree editable="top" string="variants" >
+                 				<field name="actif" />
+
+							<field name="name" />
+							<field name="laize_rouleau" />
+							<field name="longueur_rouleau" />
+							<field name="list_price" />
+
+							<field name="standard_price" />
+
+						</tree>
+					</field>
+</group>
+			</form>
+		</field>
+	</record>
+</odoo>     

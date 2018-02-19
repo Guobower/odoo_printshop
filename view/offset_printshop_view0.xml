@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem name="Calcul Offset" id="printshop2_menu" icon="terp-partner" sequence="10" />
+
+        <menuitem id="offset_applat_parent_menu" parent="printshop2_menu" name="Calcul de devis OFFSET" icon="terp-partner" sequence="1" />
+
+        <menuitem name="Configuration techniques" parent="printshop2_menu" id="offset_conf_menu" icon="terp-partner" />
+
+        <record model="ir.ui.view" id="printshop2_machine_form_view">
+            <field name="name">printshop2.machine.form</field>
+            <field name="model">printshopsheet.machine</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Machines Offset">
+                    <field name="name" />
+                    <!--<field name="product_id" domain="[('type2', '=','tirageoffset')]"/>-->
+                    <field name="product_id"/>
+                    <newline />
+                    <field name="larg_mach"/>
+                    <field name="long_mach"/>
+                    <field name="nbr_coul_mach"/>
+                    <field name="nbr_passe"/>
+                    <field name="prise_pince"/>
+                    <field name="prix_tirage" />
+                    <!--<field name="insolation_id" domain="[('type2', '=','insolation')]"/>-->
+                    <field name="insolation_id"/>
+                    <!--<field name="calage_id" domain="[('type2', '=','calage')]"/>-->
+                    <field name="calage_id"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="printshop2_machine_tree_view">
+            <field name="name">printshop2.machine.tree</field>
+            <field name="model">printshopsheet.machine</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Machines Offset">
+                    <field name="name" />
+                    <field name="product_id" />
+                    <field name="larg_mach" />
+                    <field name="long_mach" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_printshop2_machine_tree_view">
+            <field name="name">Machines Offset</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">printshopsheet.machine</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="printshop2_machines_menu" parent="offset_conf_menu"
+                  action="action_printshop2_machine_tree_view" />
+
+        <record model="ir.ui.view" id="printshop2_support_form_view">
+            <field name="name">printshop2.support.form</field>
+            <field name="model">printshopsheet.support</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="supports offset">
+                    <group col="6" colspan="4">
+                        <field name="name" />
+                        <field name="grammage" />
+                        <!--<button name="line_product" string="Calculer Devis" type="object"/>-->
+                        <newline/>
+                    </group>
+                    <!--     <button name="generate_support" string="Générer supp" type="object" states="draft" icon="gtk-execute"/> -->
+                    <group>
+                        <field name="line_ids" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="printshop2_support_tree_view">
+            <field name="name">printshop2.support.tree</field>
+            <field name="model">printshopsheet.support</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="supports">
+                    <field name="name" />
+                    <field name="grammage" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_printshop2_support_tree_view">
+            <field name="name">supports offset</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">printshopsheet.support</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="printshop2_supports_menu" parent="offset_conf_menu"
+                  action="action_printshop2_support_tree_view" />
+
+        <record model="ir.ui.view" id="printshop2_support_line_tree_view">
+            <field name="name">printshop2.support.line.tree</field>
+            <field name="model">printshopsheet.support.line</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom" string="supports" >
+                    <!--<field name="product_id" domain="[('type2', '=','support_offset')]"/>-->
+                    <field name="product_id"/>
+                    <field name="largeur_support" />
+                    <field name="longueur_support" />
+                    <field name="prix_support" required="True"/>
+                    <field name="kg_support" />
+                    <button name="creer_papier" string="mise a jour" type="object"/>
+                    <!--<field name="marque_support" />-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_printshop2_support_line_filter" model="ir.ui.view">
+            <field name="name">printshop2_support_line serach</field>
+            <field name="model">printshopsheet.support.line</field>
+            <field name="arch" type="xml">
+                <search string="Search marque">
+                    <field name="product_id"/>
+                    <!--<field name="marque_support"/>-->
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_printshop2_support_line_tree_view">
+            <field name="name">ligne supports offset</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">printshopsheet.support.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_printshop2_support_line_filter"/>
+        </record>
+
+        <menuitem id="printshop2_supports_line_menu" parent="offset_conf_menu"
+                  action="action_printshop2_support_line_tree_view" />
+
+        <record model="ir.ui.view" id="offset_printshop_form_view">
+            <field name="name">offset.printshop.form</field>
+            <field name="model">offset.printshop</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Devis pour carte,Flyers,depliant,affiches..." version="7.0">
+                    <header>
+                        <button name="compute_qte_1" string="Calculer Devis aplat" type="object"/>
+                        <button name="generate_product" string="Créer Produit" type="object" states="draft" icon="gtk-go-forward"/>
+                        <button name="generate_bom" string="Generer nomenclature" type="object" states="draft" icon="gtk-go-forward"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                            </div>
+                            <!--<h1>-->
+                                <!--<label for="type" String="Calcul devis pour"/>-->
+                                <!--<field name="type"/>-->
+                            <!--</h1>-->
+                        </div>
+                        <separator string="            _______________________________________" colspan="6"/>
+                        <group>
+                            <group>
+                                <field name="partner_id"/>
+                                <field name="imprime" string="Product"/>
+                            </group>
+                            <group>
+                                <field name="name" string="n°"/>
+                                <field name="date"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <!--<field name="marge_id"  groups="product.group_sale_pricelist"/>-->
+                                <!--<field name="quantity" readonly="True"/>-->
+                                <field name="prix_vente_unitaire"  readonly="True" groups="product.group_sale_pricelist"/>
+                                <field name="prix_vente_total" readonly="True" groups="product.group_sale_pricelist"/>
+                            </group>
+                            <group>
+                                <group>
+                                    <!--<field name="qte_1"/>-->
+                                    <!--<field name="qte_2"/>-->
+                                    <!--<field name="qte_3"/>-->
+                                </group>
+                                <group>
+                                    <!--<field name="prix_qte_1" groups="product.group_sale_pricelist"/>-->
+                                    <!--<field name="prix_qte_2" groups="product.group_sale_pricelist"/>-->
+                                    <!--<field name="prix_qte_3" groups="product.group_sale_pricelist"/>-->
+                                </group>
+                            </group>
+                        </group>
+                        <separator string="Description de vente"/>
+                        <field name="desc_ventes" placeholder="resume des caracteristiques saisies..."/>
+                        <separator string="            _______________________________________" colspan="8"/>
+                        <group name="Format">
+                            <group string="Couverture________________________">
+                                <newline/>
+                                <separator string=" _____Format"/>
+                                <newline/>
+                                <field name="largeur"/>
+                                <field name="longueur"/>
+                                <field name="largeur_ferme"/>
+                                <field name="longueur_ferme"/>
+                                <newline/>
+                                <newline/>
+                                <separator string=" _____impression"/>
+                                <newline/>
+                                <field name="nbr_pages"/>
+                                <field name="nbr_coul_recto"/>
+                                <field name="nbr_coul_verso"/>
+                                <newline/>
+                                <separator string=" _____Support"/>
+                                <newline/>
+                                <field name="support_id"/>
+                                <!--<field name="support"/>-->
+                                <newline/>
+                                <separator string=" _____finition"/>
+                                <newline/>
+                                <!--<field name="pelliculage_id" domain="[('type2', '=','pelliculage')]" widget="selection"/>-->
+                                <field name="pelliculage_id" widget="selection"/>
+                                <field name="nbr_pelliculage"/>
+                                <!--<field name="pliage_id" domain="[('type2', '=','pliage')]" widget="selection"/>-->
+                                <field name="pliage_id" widget="selection"/>
+                                <!--<field name="collage_id" domain="[('type2', '=','collage')]" widget="selection"/>-->
+                                <field name="collage_id" widget="selection"/>
+                                <!--<field name="form_decoupe_id" string="frome decoupe" domain="[('type2', '=','clichet')]" widget="selection"/>-->
+                                <field name="form_decoupe_id" string="frome decoupe" widget="selection"/>
+                                <!--<field name="decoupe_id" domain="[('type2', '=','decoupe_offset')]" widget="selection"/>-->
+                                <field name="decoupe_id" widget="selection"/>
+                                <field name="poses_forme"/>
+                                <!--<field name="serigraphie_id" string="Serigraphie" domain="[('type2', '=','serigraphie')]" widget="selection"/>-->
+                                <field name="serigraphie_id" string="Serigraphie" widget="selection"/>
+                                <field name="nbr_serigraphie"/>
+                                <newline/>
+                                <newline/>
+                                <field name="state"/><field name="bom_id" attrs="{'invisible':[('state','==','draft')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+
+                            <page string='Informations Générales'>
+                                <group colspan="4" col="6">
+                                    <!--<group colspan="4" col="4">-->
+
+                                    <!--</group>-->
+                                    <!--<group colspan="2" col="2">-->
+
+                                    <!--</group>-->
+                                    <group colspan="2" col="2">
+                                        <separator string="Machines" colspan="4"/>
+                                        <field name="machine_ids"/>
+                                    </group>
+                                    <!-- <tree editable="top" string="Calculs" colors="blue:optimal=='no';red:optimal=='yes'"> -->
+                                </group>
+                            </page>
+                            <page string="Calculs">
+                                <field name="line_ids" nolabel='1' groups="product.group_sale_pricelist">
+                                    <tree editable="top" string="Calculs">
+                                        <field name="machine_id"/>
+                                        <field name="poses_machine"/>
+                                        <field name="support_id"/>
+                                        <field name="poses_support"/>
+                                        <field name="nbr_feuille"/>
+                                        <field name="nbr_callage"/>
+                                        <field name="nbr_insolation"/>
+                                        <field name="nbr_tirage"/>
+                                        <field name="cout"/>
+                                        <field name="compute"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Les sous produits">
+                                <field name="subproduct_ids" groups="product.group_sale_pricelist">
+                                    <tree editable="bottom">
+                                        <field name="product_id"/>
+                                        <field name="name"/>
+                                        <field name="product_qty"/>
+                                        <field name="unit_price"/>
+                                        <field name="subtotal"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="offset_printshop_search_form_view" model="ir.ui.view">
+            <field name="name">offset.printshop.search.form</field>
+            <field name="model">offset.printshop</field>
+            <field name="arch" type="xml">
+                <search string="recherche">
+                    <field name="partner_id"/>
+                    <field name="name"/>
+                    <!--<field name="type"/>-->
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="offset_printshop_tree_view">
+            <field name="name">offset.printshop.tree</field>
+            <field name="model">offset.printshop</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Offset">
+                    <field name="name" />
+                    <field name="imprime"/>
+                    <field name="largeur"/>
+                    <field name="longueur"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_offset_printshop_tree_view">
+            <field name="name">Calcul Offset applat</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">offset.printshop</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="domain">[('type','=','applat')]</field>-->
+            <field name="domain">[]</field>
+        </record>
+
+        <record id="action_offset_printshop_tree_view2" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="offset_printshop_form_view" />
+            <field name="act_window_id" ref="action_offset_printshop_tree_view" />
+        </record>
+
+        <record id="action_offset_printshop_from_view2" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="offset_printshop_tree_view" />
+            <field name="act_window_id" ref="action_offset_printshop_tree_view" />
+        </record>
+
+        <menuitem id="offset_printshop_menu" parent="offset_applat_parent_menu" action="action_offset_printshop_tree_view" name="Carte Flyers depliant"/>
+
+    </data>
+</openerp>

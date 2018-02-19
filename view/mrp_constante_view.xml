@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <record id="mrp_bom_form_view_constant" model="ir.ui.view">
+            <field name="name">mrp.bom.form.constant</field>
+            <field name="model">mrp.bom</field>
+             <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">               
+                <xpath expr="//tree['bom_line_ids']/field[@name='product_id']" position="after">
+                     <field name="constante"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="mrp_bom_tree_view_odooprinting" model="ir.ui.view">
+            <field name="name">mrp.bom.tree.odooprinting</field>
+            <field name="model">mrp.bom.line</field>
+            <field name="field_parent">child_line_ids</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_component_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='product_id']" position="after">
+                    <field name="constante"/>
+                    <field name="desc_tech"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="mrp_production_form_view_ext" model="ir.ui.view">
+            <field name="name">mrp.production.form.view.ext</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group//field[@name='origin']" position="after">
+                    <field name="order_id"/>
+                    <field name="invoice_id" domain="[('date_invoice','>=','01/01/2016'),('type','=','out_invoice')]"/>
+                    <field name="partner_id"/>
+                    <field name="type_prod"/>
+                    <field name="etat_prod"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="mrp_production_add_costs_form_view" model="ir.ui.view">
+            <field name="name">mrp.production.add.costs.form.view</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/notebook/page[2]" position="after">
+                    <page string="Production Costs"  groups="sales_team.group_sale_manager" >
+                     
+                        <separator string="Total Costs" colspan="6"/>
+                        <group colspan="6">
+                            <field name="cout_total_matieres"/>
+                            <field name="cout_total_machines"/>
+                            <field name="cout_total_charge"/>
+                            <newline />
+                            <field name="cout_total_cout"/>
+                        </group>
+                        <newline/>
+                        <separator string="Cout du produit" colspan="4"/>
+                        <field name="cout_unitaire"/>
+                    </page>
+                                        <page string="Workcenter" >
+                                <field name="workorder_ids">
+                                    <tree string="Workcenter">
+                                <field name="name"/>
+                                <field name="qty_printshop"/>
+                                <field name="state"/>
+                            </tree>                        </field>
+
+
+                    </page>
+
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="mrp_production_tree_view_ext" model="ir.ui.view">
+            <field name="name">mrp.production.tree.view.ext</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='date_planned_start']" position="after">
+                    <field name="order_id"/>
+                    <field name="invoice_id"/>
+                    <field name="partner_id"/>
+                    <field name="type_prod"/>
+                    <field name="etat_prod"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_mrp_production_filter_ext" model="ir.ui.view">
+            <field name="name">view.mrp.production.filter.ext</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.view_mrp_production_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="/search/field[@name='name']" position="replace">
+                    <field name="name" string="Production" filter_domain="['|','|',('name','ilike',self),('origin','ilike',self),('order_id','ilike',self)]"/>
+                </xpath>
+                <xpath expr="/search/group" position="inside">
+                    <filter string="Source SO" domain="[]" context="{'group_by':'order_id'}"/>
+                    <filter string="Source MO" domain="[]" context="{'group_by':'parent_id'}"/>
+                    <filter string="utilisateur" domain="[]" context="{'group_by':'user_id'}"/>
+                    <filter string="etat" domain="[]" context="{'group_by':'etat_prod'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--ADDS FORM VIEW OF PRODUCTION COSTS IN A MRP-PRODUCTION-->
+        <record id="mrp_routing_workcenter_tree_view_printshop" model="ir.ui.view">
+            <field name="name">mrp.routing.workcenter.tree.printshop</field>
+            <field name="model">mrp.routing.workcenter</field>
+            <field name="inherit_id" ref="mrp.mrp_routing_workcenter_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='time_cycle']" position="after">
+                    <field name="qty_printshop"/>
+
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem name="SIGN SHOP" id="menu_signshop"   sequence="20" web_icon="offset_printshop,static/description/signshop.png"/>/>
+	<menuitem name="Sign Printing" id="sign_printshop_menu"  parent="menu_signshop" icon="terp-partner"  sequence="20"/>
+	<menuitem name="Sign caclulate price" parent="sign_printshop_menu" id="grand_format_menu"/>
+	<menuitem name="technical Setting" parent="menu_signshop" id="grand_format_conf_menu" sequence="60"/>
+	<record model="ir.ui.view" id="printshop_machine_form_view">
+		<field name="name">printshop.machine.form</field>
+		<field name="model">printshop.machine</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Machines Digital Printing">
+				<group col="6" colspan="4">
+					<field name="name"/>
+					<field name="brand"/>
+					<field name="print_id" domain="[('type_production', '=','tiragedigital')]"/>
+					<field name="laize_mach"/>
+					<field name="long_mach"/>
+				</group>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="printshop_machine_tree_view">
+		<field name="name">printshop.machine.tree</field>
+		<field name="model">printshop.machine</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Machines Digital Printing">
+				<field name="name"/>
+				<field name="type_printer"/>
+				<field name="laize_mach"/>
+				<field name="long_mach"/>
+				<button name="write_name" type="object"
+                                class="oe_stat_button" icon="fa-gears" string="update name"></button>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_printshop_machine_tree_view">
+		<field name="name">Machines</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">printshop.machine</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="Machines"  id="printshop_machines_menu" parent="grand_format_conf_menu" action="action_printshop_machine_tree_view" />
+	<record model="ir.ui.view" id="printshop_support_form_view">
+		<field name="name">printshop.support.form</field>
+		<field name="model">printshop.support</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="supports">
+				<group col="6" colspan="4">
+					<field name="name" />
+					<field name="type_id"/>
+					<field name="brand"/>
+					<button name="write_name" type="object"
+                                class="oe_stat_button" icon="fa-gears" string="update name"></button>
+				</group>
+				<group>
+					<field name="line_ids" domain="[('marque_supportGF', '=',name)]">
+						<tree editable="top" string="Variants">
+							<field name="product_id" />
+							<field name="largeur_support"/>
+							<field name="longueur_support"/>
+						</tree>
+					</field>
+				</group>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="printshop_support_tree_view">
+		<field name="name">printshop.support.tree</field>
+		<field name="model">printshop.support</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="supports">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_printshop_support_tree_view">
+		<field name="name">supports</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">printshop.support</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="Category roll print media"  id="printshop_supports_menu" parent="printshop_articles" action="action_printshop_support_tree_view" />
+	<record model="ir.ui.view" id="printshop_rigide_form_view">
+		<field name="name">printshop.rigide.form</field>
+		<field name="model">printshop.rigide</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="rigides">
+				<group col="6" colspan="4">
+					<field name="name"/>
+					<field name="type_id"/>
+					<field name="reference"/>
+					<button name="write_name" type="object"
+                                class="oe_stat_button" icon="fa-gears" string="update name"></button>
+				</group>
+				<field name="line_ids"  widget="one2many_list" editable="top" string="Variants">
+					<tree>
+						<field name="product_id" domain="[('type_matieres', '=','rigide')]"/>
+						<field name="largeur_rigide"/>
+						<field name="longueur_rigide"/>
+						<field name="prix_rigide"/>
+					</tree>
+				</field>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="printshop_rigide_tree_view">
+		<field name="name">printshop.rigide.tree</field>
+		<field name="model">printshop.rigide</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="rigides">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_printshop_rigide_tree_view">
+		<field name="name">rigides</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">printshop.rigide</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="rigides"  id="printshop_rigides_menu" parent="grand_format_conf_menu" action="action_printshop_rigide_tree_view" />
+	<record model="ir.ui.view" id="sign_printshop_form_view">
+		<field name="name">sign_printshop.form</field>
+		<field name="model">sign.printshop</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form class="o_sale_order">
+				<sheet >
+					<div class="oe_button_box" name="compute_qte_1" >
+						<button name="compute_qte_1" type="object"
+                                class="oe_stat_button" icon="fa-gears" string="Calcul Price"></button>
+						<button name="generate_product_ok" type="object"
+                                class="oe_stat_button" icon="fa-tags" string="Create product"></button>
+						<button name="generate_bom" type="object"
+                                class="oe_stat_button" icon="fa-table" string="Create Bom"></button>
+						<button name="generate_list_price" type="object"
+                                class="oe_stat_button" icon="fa-table" string="Create List price for template"></button>
+					</div>
+					<div class="oe_row oe_spaced">
+						<div class="oe_span12">
+							<div class="oe_demo oe_picture oe_screenshot">
+								<h1>
+									<field name="type_sign" widget='radio' options="{'horizontal': true}" class="oe_slogan" icon="fa-gears" style="color:#875A7B;"/>
+								</h1>
+							</div>
+						</div>
+					</div>
+					<group></group>
+					<group></group>
+					<div class="panel panel-primary">
+						<group>
+							<group >
+								<field name="partner_id" options="{'limit': 10, 'create': false, 'create_edit': false}"/>
+								<field name="imprime" string="Product" />
+								<field name="name" string="N° Quote" />
+								<field name="date" string="Date" />
+								<field name="parent_id" options="{'no_create': True}"/>
+							</group>
+							<group>
+								<field name="desc_ventes" class="oe_read_only" />
+							</group>
+						</group>
+					</div>
+					<field name="signprofil_setting" widget='selection' colspan="4" />
+					<group>
+						<group  class="panel panel-warning">
+							<field name="Multiqty" widget="one2many" string='Quantity'>
+								<tree editable="top"  >
+									<field name="quantites"  />
+								</tree>
+							</field>
+						</group>
+						<group  class="panel panel-warning">
+							<field name="remise_id"  groups="sales_team.group_sale_manager" string="Discount"/>
+							<field name="priceline_ids"  string='Prices table' domain="[('printshop_id', '=',printshop_id)]" class="table" options="{'no_create': True}">
+								<tree editable="top">
+									<field name="quantites" />
+									<field name="prix_qte" />
+									<field name="total_prix_qte" groups="sales_team.group_sale_manager"/>
+									<field name="prix_qte_cout_mat"  groups="sales_team.group_sale_manager"/>
+									<field name="prix_qte_sale" />
+								</tree>
+							</field>
+						</group>
+					</group>
+					<group colspan="4" col="6">
+						<group colspan="2" col="2">
+							<separator string="Size" colspan="2"/>
+							<field name="longueur"/>
+							<field name="largeur"/>
+							<field name="fond_perdu"/>
+						</group>
+						<group col="2" colspan="2">
+							
+						</group>
+					</group>
+					<notebook>
+						<page string="Informations Générales">
+							<group>
+								<group>
+									<separator string="Print Machine" colspan="2"/>
+									<field name="machine_id" widget="radio"/>
+								</group>
+								<group>
+									<separator string="print media" colspan="2"/>
+									<field name="support_id" colspan="2" />
+								</group>
+							</group>
+							<group>
+								<group>
+									<separator string="Scraping " />
+									<newline/>
+									<field name="raclage_id" widget="radio" domain="[('type_production', '=','raclage')]"/>
+									<field name="rigide_id"  string="racler sur " widget="selection" attrs="{'invisible': [('raclage_id','=',False)]}"/>
+									<field name="largeur_raclage_rigide"  string="largeur_raclage_rigide " attrs="{'invisible': [('raclage_id','=',False)]}"/>
+									<field name="longueur_raclage_rigide"  string="longeur_raclage_rigide "  attrs="{'invisible': [('raclage_id','=',False)]}"/>
+									<field name="quantite_raclage_rigide"  string="quantite_raclage_rigide " attrs="{'invisible': [('raclage_id','=',False)]}"/>
+									<separator string="Suspension rod" />
+									<newline/>
+									<field name="baguette_id" widget="radio" domain="[('type_matieres', '=','baguette')]"/>
+									<field name="baguettes" attrs="{'invisible': [('baguette_id','=',False)]}"/>
+								</group>
+								<group>
+									<separator string="Sewing"/>
+									<newline/>
+									<field name="couture_id" widget="radio" domain="[('type_production', '=','couture')]"/>
+									<separator string="Eyelets" />
+									<newline/>
+									<field name="oeillet_id" widget="radio" domain="[('type_matieres', '=','oeillet')]"/>
+									<field name="oeillets" attrs="{'invisible': [('oeillet_id','=',False)]}"/>
+								</group>
+							</group>
+						</page>
+						<page string="composants">
+							<field name="subproduct_ids">
+								<tree editable="bottom">
+									<field name="product_id"/>
+									<field name="name"/>
+									<field name="product_qty"/>
+									<field name="unit_price" />
+									<field name="subtotal" />
+								</tree>
+							</field>
+							<field name="qty_feuilles"/>
+							<group colspan="4" col="4">
+								<separator string="Sheet size " colspan="2"/>
+								<newline/>
+								<button name="compute_force" string="Force sheet size" type="object"  icon="gtk-ok"/>
+							</group>
+							<group colspan="4" col="4">
+								<separator string="Size depende to print media width" colspan="4"/>
+								<newline/>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="sign_printshop_tree_view">
+		<field name="name">sign.printshop.tree</field>
+		<field name="model">sign.printshop</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Grand Formats">
+				<field name="date"/>
+				<field name="name"/>
+				<field name="imprime"/>
+				<field name="Multiqty"/>
+				<field name="prix_vente_unitaire"/>
+				<field name="partner_id"/>
+				<field name="product_id"/>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_digital_printshop_tree_view">
+		<field name="name">Calcul Grand Format</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">sign.printshop</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="calcul digital"  id="sign printshop_menu" parent="menu_signshop" action="action_digital_printshop_tree_view" sequence="10" />
+</odoo>
+       

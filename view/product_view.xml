@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem name="Product" id="menu_Productshop"  web_icon="offset_printshop,static/description/icon_product.png"/>
+	<menuitem name="raw materials" id="printshop_articles"  parent="menu_Productshop" sequence="50" />
+	<record id="attribute_line_tree_view" model="ir.ui.view">
+		<field name="name">product.attribute.line.tree</field>
+		<field name="model">product.attribute.line</field>
+		<field name="arch" type="xml">
+			<tree string="Variant Values" editable="top">
+				<field name="product_tmpl_id"/>
+				<field name="attribute_id"/>
+				<field name="value_ids"/>
+			</tree>
+		</field>
+	</record>
+	<record id="attribute_line_action" model="ir.actions.act_window">
+		<field name="name">Attributes lines</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">product.attribute.line</field>
+		<field name="view_mode">tree</field>
+		<field name="view_type">form</field>
+	</record>
+	<menuitem action="attribute_line_action"
+                  id="menu_attribute_line_action"
+                  parent="sale.prod_config_main" sequence="9" />
+	<record id="product_template_search_view_offset" model="ir.ui.view">
+		<field name="name">product.template.search.offset</field>
+		<field name="model">product.template</field>
+		<field name="arch" type="xml">
+			<search string="Product">
+				<field name="name" string="Product"/>
+				<filter string="type_offset" icon="terp-accessories-archiver" domain="[('type','=','service')]"/>
+				<filter string="Consumable" name="consumable" icon="terp-accessories-archiver" domain="[('type','=','consu')]" help="Consumable products"/>
+				<separator/>
+				<filter string="Can be Sold" name="filter_to_sell" icon="terp-accessories-archiver-minus" domain="[('sale_ok','=',0)]"/>
+				<field name="categ_id"/>
+				<field string="Product Variant" name="product_variant_ids" filter_domain="['|', ('product_variant_ids.name','ilike',self), ('product_variant_ids.attribute_value_ids.name','ilike',self)]"/>
+				<field name="company_id"/>
+				<field name="pricelist_id" widget="selection" context="{'pricelist': self}" filter_domain="[]" groups="product.group_sale_pricelist"/>
+				<!-- Keep widget=selection on this field to pass numeric `self` value, which is not the case for regular m2o widgets! -->
+				<group  expand='0' string='Group by...'>
+					<filter string='Category' domain="[]" context="{'group_by' : 'categ_id'}"/>
+					<filter string='Default Unit of Measure' icon="terp-mrp" domain="[]" context="{'group_by' : 'uom_id'}"/>
+					<filter string='Type' icon="terp-stock_symbol-selection" domain="[]" context="{'group_by' : 'type'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+	<record id="printshop_product_template_view_tree" model="ir.ui.view">
+		<field name="name">product.template.printshop.tree</field>
+		<field name="model">product.template</field>
+		<field name="mode">primary</field>
+		<field name="arch" type="xml">
+			<tree colors="red:list_price in (0,00);red:standard_price in (0,00);bleu:list_price &lt; (standard_price);red:list_price in (1,00)"  >
+				<field name="name"/>
+                                <field name="type_matieres"   /> 
+                                <field name="type_production"   /> 
+                                <field name="list_price"   /> 
+                                <field name="standard_price"   /> 
+                                <field name="prix_kg"   /> 
+
+                                <field name="work_id" />
+
+			</tree>
+		</field>
+	</record>
+	<record id="printshop_product_template_view_form" model="ir.ui.view">
+		<field name="name">product.template.printshop.form</field>
+		<field name="model">product.template</field>
+		<field name="mode">primary</field>
+		<field name="arch" type="xml">
+			<form string="Product Printshop ">
+				<header></header>
+				<sheet>
+					<field name='product_variant_count' invisible='1'/>
+					<field name="id" invisible="True"/>
+					<div class="oe_button_box" name="button_box">
+						<button name="toggle_active" type="object"
+                                class="oe_stat_button" icon="fa-archive">
+							<field name="active" widget="boolean_button"
+                                options='{"terminology": "archive"}'/>
+						</button>
+						<button name="miseajour_papier" type="object"
+                                class="oe_stat_button" icon="fa-pencil-square-o" string="update Paper name"></button>
+						<button name="creer_rouleau" type="object"
+                                class="oe_stat_button" icon="fa-pencil-square-o" string="update Roll name"></button>
+                                
+                                
+					</div>
+					<field name="image_medium" widget="image" class="oe_avatar"/>
+					<div class="oe_title">
+						<label class="oe_edit_only" for="name" string="Product Name"/>
+						<h1>
+							<field name="name" placeholder="Product Name"/>
+						</h1>
+						<div name="options" groups="base.group_user">
+							<div>
+								<field name="sale_ok"/>
+								<label for="sale_ok"/>
+                                                                
+							</div>
+							<div>
+								<field name="purchase_ok"/>
+								<label for="purchase_ok"/>
+                                                                <newline/>
+
+                                                                <label for="actif"/>
+
+                                                            <field name="actif" help="cHamp of products calculated in configurator print shop" string="Actif for calculate in price" />
+
+							</div>
+
+
+        
+
+
+						</div>
+						</div>
+          									<newline/>
+                                                                                    <group>
+
+							<label for="type_matieres"/>
+							<h3> <field name="type_matieres"  string="Type of raw materials"  /> </h3>
+                                                            <field name="type_pelliculage" attrs="{'invisible':[('type_matieres','not in', 'pelliculage')]}"/>
+
+                                                        	<newline/>
+                                                                                                                       </group>
+                                                                                                                     <group>
+
+
+                                                        <label for="type_production"/>
+							<h3> <field name="type_production"  string="Type of production equipment"   /> </h3>
+
+
+                                                        <field name="constante" widget='radio' />
+                                                        </group>
+
+                                                        
+						
+					
+					<notebook>
+						<page string="General Information" name="general information">
+							<group>
+								<group name="group_general">
+									<field name="type"/>
+								</group>
+								<group name="group_standard_price">
+									<field name="list_price" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+									<label for="standard_price" groups="base.group_user"/>
+									<div name="standard_price_uom" groups="base.group_user">
+                                                                        <field name="standard_price" widget='monetary' options="{'currency_field': 'currency_id'}" class="oe_inline"/>
+									</div>
+									<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+									<field name="uom_id" groups="product.group_uom" options="{'no_create': True}"/>
+									<field name="uom_po_id" groups="product.group_uom" options="{'no_create': True}"/>
+									<field name="currency_id" invisible="1"/>
+									<newline/>
+                                                                        <field name="support_offset_is" help="cHamp of products calculated in configurator print shop" string="Is the product a paper holder?" />
+
+
+								</group>
+							</group>
+
+						<group name="properties">
+          <group>
+                                                        <field name="marque_support"  />
+                                                        </group><group>
+                                                        <field name="marque_rigide"  /></group>
+
+							<group >
+                                                           <separator string="Support papier en feuille" colspan="4" />
+
+								<field name="largeur_support"  />
+								<field name="longueur_support"  />/>
+								<field name="grammage" />
+                                                                <field name="weight_sheet"  />
+
+								<field name="prix_feuille"  />
+								<field name="prix_kg"  />
+                                                                <button name="compute_sheet" type="object" string="sheet price" class="oe_stat_button" icon="fa-gears" />
+
+							</group>
+                                                        	<group >
+                                                        <separator string=" Autres Sheet support" colspan="3" />
+
+                                                            <field name="longueur_calcul" help="Field of products calculated in the configurator print shop" />
+                                                            <field name="largeur_calcul" help="Field of products calculated in the configurator print shop" />
+                                                            <field name="epaisseur_calcul" help="Field of products calculated in the configurator print shop" />
+
+							</group>
+                                                        
+                                                        <group>
+                                                        <separator string="Roll support" colspan="3"/>
+                                                        <field name="laize_rouleau" string=" Roll width"/>
+                                                        <field name="longueur_rouleau" string=" Roll length"/>
+                                             
+
+							</group>
+                                                     </group>   
+                                                  
+						</page>
+					
+						<page string="Sales" attrs="{'invisible':[('sale_ok','=',False)]}" name="sales">
+							<div name="pricelist_item" >
+								<separator string="Pricing"/>
+								<field name="item_ids" nolabel="1" context="{'default_base':'list_price', 'default_applied_on' :'1_product'}">
+									<tree string="Pricelist Items" editable="bottom">
+										<field name="pricelist_id" string="Pricelist" required='1'/>
+										<field name="fixed_price" string="Price" required='1'/>
+										<field name="min_quantity"/>
+										<field name="date_start"/>
+										<field name="date_end"/>
+										<field name="applied_on" invisible="1"/>
+									</tree>
+								</field>
+							</div>
+							<group name="sale">
+								<group name="email_template_and_project"
+                                    attrs="{'invisible':[('type', '!=', 'service')]}"/></group>
+						</page>
+
+						<page string="Prices tables" >
+          <field name="seller_ids" />
+          
+							<field name="price_list_item" >
+								<tree string="Sales Prices" >
+									<field name="product_tmpl_id" />
+									<field name="quantite" />
+									<!--<field name="qte_listprice" />-->
+									<field name="bom_id" />
+									<field name="qte_bom"  string="Qty bom"/>
+									<field name="qte_bom_price" />
+									<field name="printshop_id" />
+								</tree>
+							</field>
+						</page>
+						<page string="Notes" name="notes">
+							<group name="description">
+								<separator string="Description for Quotations" colspan="4"/>
+								<field name="description_sale" colspan="4" nolabel="1"
+                                    placeholder="This note will be displayed on the quotations."/>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record  id="action_printshop_product_template_view" model="ir.actions.act_window">
+		<field name="name">Artciles Printshop</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">product.template</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="product_template_search_view_offset"/>
+	</record>
+	<record id="ction_printshop_product_template_tree_view" model="ir.actions.act_window.view">
+		<field name="view_mode">tree</field>
+		<field name="view_id" ref="printshop_product_template_view_tree" />
+		<field name="act_window_id" ref="action_printshop_product_template_view" />
+	</record>
+	<record id="ction_printshop_product_template_form_view" model="ir.actions.act_window.view">
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="printshop_product_template_view_form" />
+		<field name="act_window_id" ref="action_printshop_product_template_view" />
+	</record>
+        
+        <menuitem name="Articles matieres" id="menu_printshop_product_template_view" action="action_printshop_product_template_view" parent="printshop_articles" />
+
+</odoo>
